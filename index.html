@@ -1,0 +1,1165 @@
+<!-- 
+Nama :  Rizal Maulana
+NIM : 250401010197
+Kelas : IF201-PJJ Informatika
+Mata Kuliah : Pemrograman Web I -->
+
+
+<!DOCTYPE html>
+<!-- DOCTYPE wajib ada di baris paling pertama, kasih tau browser ini HTML5 -->
+<html lang="id">
+
+<head>
+    <!-- charset UTF-8 supaya karakter khusus seperti &, —, © bisa terbaca dengan benar -->
+    <meta charset="UTF-8">
+    <!-- viewport buat ngatur tampilan di layar mobile, tanpa ini layout bisa berantakan -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- judul halaman website, tampil di bar tab browser -->
+    <title>Rizal Maulana - IT Support & Cybersecurity Specialist</title>
+    <meta name="description" content="IT Support Technician & Cybersecurity Learner. Balikpapan, East Kalimantan.">
+
+    <!-- bootstrap icons untuk semua icon (bi bi-...) yang dipakai di seluruh halaman -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- file CSS terpisah, semua styling ada di sini -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="lang-id">
+
+    <!-- elemen dekoratif background, huruf "R" besar yang muncul samar di belakang konten.
+         ini pure visual, tidak punya fungsi konten, hanya pemberi kedalaman tampilan -->
+    <div class="custom-bg-decor flex-center">R</div>
+
+    <!-- ===== NAVBAR =====
+         navbar ini fixed di atas layar (position: fixed di CSS).
+         class "scrolled" ditambahkan JS saat halaman di-scroll, bikin background gelap & blur.
+         semua href="#..." di dalam navbar adalah link INTERNAL yang scroll ke section tujuan -->
+   
+         <!-- Navigasi Utama bar / Navbar -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo-group">
+                <span class="nav-logo">RM.</span>
+                <span class="nav-status-dot"></span>
+                <span class="nav-status-text font-mono lang-id">AKTIF</span>
+                <span class="nav-status-text font-mono lang-en">ACTIVE</span>
+            </div>
+            
+            <div class="nav-right-actions">
+                <!-- Toggle Bahasa (ID / EN) -->
+                <button id="lang-switcher" class="lang-switch-btn font-mono" title="Ubah Bahasa / Switch Language">
+                    <span class="lang-indicator-text id-text">ID</span>
+                    <span class="lang-indicator-text en-text">EN</span>
+                    <span class="lang-switch-slider"></span>
+                </button>
+
+                <!-- Tombol Menu Mobile -->
+                <button class="nav-toggle" id="nav-toggle">
+                    <i class="bi bi-list"></i>
+                    <span class="lang-id">Menu</span>
+                    <span class="lang-en">Menu</span>
+                </button>
+
+                <!-- Link Navigasi Utama -->
+                <div class="nav-links" id="nav-links">
+                    <a href="#hero" class="lang-id">Beranda</a>
+                    <a href="#hero" class="lang-en">Home</a>
+
+                    <a href="#about" class="lang-id">Tentang</a>
+                    <a href="#about" class="lang-en">About</a>
+
+                    <a href="#skills" class="lang-id">Kemampuan</a>
+                    <a href="#skills" class="lang-en">Skills</a>
+
+                    <a href="#experience" class="lang-id">Pengalaman</a>
+                    <a href="#experience" class="lang-en">Experience</a>
+
+                    <a href="#education" class="lang-id">Pendidikan</a>
+                    <a href="#education" class="lang-en">Education</a>
+
+                    <a href="#writing" class="lang-id">Tulisan</a>
+                    <a href="#writing" class="lang-en">Writing</a>
+
+                    <a href="#gallery" class="lang-id">Galeri</a>
+                    <a href="#gallery" class="lang-en">Gallery</a>
+
+                    <a href="#contact" class="lang-id">Kontak</a>
+                    <a href="#contact" class="lang-en">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO =====
+         section pertama yang kelihatan saat halaman dibuka.
+         dibagi 2 kolom: kiri teks perkenalan, kanan foto + statistik.
+         h1 hanya boleh ada SATU di seluruh halaman, ada di sini -->
+    <section id="hero">
+        <!-- Glow dekoratif di background -->
+        <div class="hero-glow"></div>
+
+        <div class="container row-spacing">
+            <div class="hero-grid">
+
+                <!-- Kolom kiri: Teks perkenalan -->
+                <div class="hero-content">
+                    <p class="hero-eyebrow fade-in">BALIKPAPAN, EAST KALIMANTAN</p>
+
+                    <!-- H1: Nama utama dengan aksen gradien -->
+                    <h1 class="hero-name fade-in">
+                        Rizal<br><span>Maulana</span>
+                    </h1>
+
+                    <!-- Typewriter: Teks berganti otomatis antara IT Support, Cybersec, e-commerce -->
+                    <div class="hero-type fade-in">
+                        <span class="hero-type-label font-mono">Role /</span>
+                        <span id="typewriter" class="font-mono text-cyan"></span><span class="cursor">_</span>
+                    </div>
+
+                    <!-- Paragraf deskripsi utama -->
+                    <p class="hero-desc fade-in lang-id">
+                        <strong>Profesional IT</strong> yang berorientasi pada detail dengan 3+ tahun pengalaman dalam perakitan fisik PC, troubleshooting sistem, dan tata kelola operasional e-commerce. Aktif mendalami <strong>cybersecurity</strong> dengan pengakuan <em>responsible disclosure</em> resmi dari berbagai lembaga siber pemerintah.
+                    </p>
+                    <p class="hero-desc fade-in lang-en">
+                        A detail-oriented <strong>IT professional</strong> with 3+ years of hands-on experience in computer hardware assembling, layout troubleshooting, and operational e-commerce systems. Actively transitioning into <strong>cybersecurity</strong> with recognized <em>responsible disclosures</em> accepted by state security groups.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="cta-group fade-in col-spacing">
+                        <a href="https://linkedin.com/in/rizlmaulanaa" target="_blank" class="btn-solid">
+                            <i class="bi bi-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://medium.com/@heyrm" target="_blank" class="btn-ghost">
+                            <i class="bi bi-medium"></i> Medium Writeups
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Kolom kanan: Foto Profil & Counter Statistik -->
+                <div class="hero-visual">
+                    <div class="hero-img-wrap fade-in">
+                        <img src="media/profile2.jpeg"
+                             alt="Rizal Maulana Profile Headshot"
+                             class="hero-photo"
+                             referrerpolicy="no-referrer">
+                        <span class="hero-badge">
+                            <i class="bi bi-shield-check"></i> WEB-RTA Certified
+                        </span>
+                    </div>
+
+                    <!-- Stat counter panel -->
+                    <div class="hero-stats fade-in">
+                        <div class="stat-pill">
+                            <span class="stat-n font-mono text-indigo" data-count="4" data-suffix="+">0+</span>
+                            <span class="stat-l lang-id">Tahun Pengalaman</span>
+                            <span class="stat-l lang-en">Years Exp</span>
+                        </div>
+                        <div class="stat-pill">
+                            <span class="stat-n font-mono text-cyan" data-count="9">0</span>
+                            <span class="stat-l lang-id">Sertifikasi</span>
+                            <span class="stat-l lang-en">Certs Held</span>
+                        </div>
+                        <div class="stat-pill">
+                            <span class="stat-n font-mono text-cyan" data-count="3">0</span>
+                            <span class="stat-l lang-id">Laporan Celah</span>
+                            <span class="stat-l lang-en">Disclosures</span>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+        <div class="container">
+            <p class="sec-tag font-mono"><i class="bi bi-person"></i> ABOUT ME</p>
+            <h2 class="sec-title lang-id">Profil Singkat</h2>
+            <h2 class="sec-title lang-en">Personal Profile</h2>
+            <p class="sec-sub lang-id">Teknisi hardware berpengalaman yang aktif memperluas keahlian ke arah keamanan siber.</p>
+            <p class="sec-sub lang-en">A hardware maintenance technician actively focusing on secure application development.</p>
+
+            <div class="about-grid">
+
+                <!-- Gambar hiasan samping & Informasi bahasa -->
+                <div class="about-visual fade-in">
+                    <img src="https://images.unsplash.com/photo-1731910296403-f9495ce8e4cb?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                         alt="Foto Profil"
+                         class="about-img"
+                         referrerpolicy="no-referrer"> <!--  Mengambil gambar dari internet -->
+                    <div class="lang-pills">
+                        <span class="lang-pill"><i class="bi bi-translate"></i> Bahasa Indonesia - Fluent</span>
+                        <span class="lang-pill"><i class="bi bi-translate"></i> English - Good</span>
+                    </div>
+                </div>
+
+                <!-- Uraian teks profesional -->
+                <div class="about-text fade-in">
+                    <!-- paragraf 1: pekerjaan utama.
+                         <strong> untuk penekanan penting, <b> untuk tebal biasa, <u> untuk garis bawah -->
+                    <p class="about-p lang-id">
+                        Saat ini, saya bekerja penuh waktu di <strong class="text-white">PT Visidata Inti Teknologi</strong> (Lenovo Authorized Store, Balikpapan) sejak Agustus 2021. Tanggung jawab utama saya meliputi perakitan <b><u>10 hingga 15 PC custom berskala menengah-tinggi tiap bulan</u></b>, troubleshooting hardware, serta administrasi toko e-commerce resmi di platform ritel digital terbesar Indonesia.
+                    </p>
+                    <p class="about-p lang-en">
+                        Currently, I serve as a full-time hardware technician at <strong class="text-white">PT Visidata Inti Teknologi</strong> (Lenovo Authorized Store, Balikpapan) since August 2021. I orchestrate custom assembly procedures for <b><u>10 to 15 high-performance computer builds monthly</u></b>, troubleshooting critical system crashes, and coordinating our e-commerce online catalog.
+                    </p>
+
+                    <!-- paragraf 2: perjalanan cybersecurity.
+                         <mark> untuk teks disorot/highlight, <em> untuk penekanan semantik -->
+                    <p class="about-p lang-id">
+                        Di sela-sela aktivitas utama, saya menginvestasikan waktu untuk mendalami <em>pengujian keamanan web</em> (bug hunting). Upaya etis ini berhasil membuahkan validasi keamanan resmi dari unit tanggap siber lokal pemerintahan, termasuk <mark>Pusdatin BPOM RI</mark>, <mark>Denpasar CSIRT</mark>, dan <mark>Banyuwangi CSIRT</mark>.
+                    </p>
+                    <p class="about-p lang-en">
+                        In parallel, I invest my spare hours researching computer security, specifically <em>Web Penetration Testing</em> (bug hunting). Under professional guidelines, my vulnerabilities audit sheets have been acknowledged and officially validated by prestigious government task forces, such as <mark>BPOM RI (Pusdatin)</mark>, <mark>Denpasar CSIRT</mark>, and <mark>Banyuwangi CSIRT</mark>.
+                    </p>
+
+                    <!-- paragraf 3: pendidikan & tujuan.
+                         <del> untuk teks dicoret (menunjukkan sesuatu yang sudah lewat/diganti),
+                         <ins> untuk teks disisipkan (pengganti dari yang dicoret) -->
+                    <p class="about-p lang-id" style="margin-bottom: 24px;">
+                        Untuk memperkuat landasan teoretis, saya juga menempuh pendidikan formal <strong>S1 Informatika</strong> di Universitas Siber Asia secara online.
+                        Fokus saya bukan lagi sekadar <del>teknisi hardware biasa</del> <ins>melainkan seorang cybersecurity professional</ins> yang memahami sistem dari dalam ke luar.
+                    </p>
+                    <p class="about-p lang-en" style="margin-bottom: 24px;">
+                        To strengthen my academic foundations, I am actively pursuing a <strong>Bachelor of Computer Science (S1 Informatika)</strong> at Asia Cyber University via distance education.
+                        My focus has shifted from <del>a plain hardware technician</del> <ins>to a full-stack cybersecurity professional</ins> with deep infrastructure knowledge.
+                    </p>
+
+                    <p class="focus-label font-mono">TOOLS &amp; KEAHLIAN FOKUS</p>
+                    <div class="focus-tags-container">
+                        <span class="itag font-mono">OWASP Top 10</span>
+                        <span class="itag font-mono">Burp Suite</span>
+                        <span class="itag font-mono">Linux CLI</span>
+                        <span class="itag font-mono">Web Pentesting</span>
+                        <span class="itag font-mono">OSINT</span>
+                        <span class="itag font-mono">PC Assembly</span>
+                        <span class="itag font-mono">Troubleshooting</span>
+                        <span class="itag font-mono">E-Commerce Management</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS =====
+         empat card skill: IT Support, Cybersecurity, E-Commerce, Soft Skills.
+         tiap card punya <ul> (unordered list) masing-masing.
+         <ul> untuk list tidak berurutan (bullet), <ol> kalau butuh urutan bernomor -->
+    <section id="skills">
+        <div class="container">
+            <p class="sec-tag font-mono"><i class="bi bi-cpu"></i> CORE SKILLS</p>
+            <h2 class="sec-title lang-id">Peta Kompetensi</h2>
+            <h2 class="sec-title lang-en">Technical Matrices</h2>
+            <p class="sec-sub lang-id">Kombinasi keahlian operasional hardware dan ketahanan aplikasi digital.</p>
+            <p class="sec-sub lang-en">Bridging the gap between physical computer infrastructure and application security.</p>
+
+            <div class="skills-grid">
+
+                <!-- Card 1: IT Support & Hardware -->
+                <div class="sk-card fade-in">
+                    <div class="sk-header">
+                        <span class="sk-icon text-indigo"><i class="bi bi-display"></i></span>
+                        <h3 class="sk-title lang-id">Dukungan IT &amp; Perangkat Keras</h3>
+                        <h3 class="sk-title lang-en">IT Support &amp; Computer Hardware</h3>
+                    </div>
+                    <ul class="sk-list">
+                        <li class="lang-id">Perakitan PC Spek Kustom &amp; Workstation</li>
+                        <li class="lang-en">High-End PC Custom Assembly &amp; Server Blueprints</li>
+
+                        <li class="lang-id">Investigasi &amp; Penanganan Kerusakan Hardware Komputer</li>
+                        <li class="lang-en">Precision Software &amp; Physical Fault Diagnostic</li>
+
+                        <li class="lang-id">Deployment &amp; Konfigurasi Windows OS Professional</li>
+                        <li class="lang-en">Advanced Windows Deployment Security Baseline</li>
+
+                        <li class="lang-id">Prosedur Kloning Storage &amp; Backup Pencitraan Disk</li>
+                        <li class="lang-en">Sector-Level Disk Cloning &amp; Ghost Imaging</li>
+
+                        <li class="lang-id">Penyusunan Backup Pemulihan Sistem Pasca-Gagal</li>
+                        <li class="lang-en">System Restoration Plans with Zero Data Loss</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Cybersecurity -->
+                <div class="sk-card fade-in">
+                    <div class="sk-header">
+                        <span class="sk-icon text-cyan"><i class="bi bi-shield-lock"></i></span>
+                        <h3 class="sk-title lang-id">Keamanan Siber</h3>
+                        <h3 class="sk-title lang-en">Information &amp; Cyber Security</h3>
+                    </div>
+                    <ul class="sk-list">
+                        <li class="lang-id">Metodologi Pengujian Penetrasi Aplikasi Web (VAPT)</li>
+                        <li class="lang-en">Web Application Vulnerability Assessment &amp; Pentesting</li>
+
+                        <li class="lang-id">Pemahaman OWASP Top 10 (SQLi, XSS, SSRF, IDOR)</li>
+                        <li class="lang-en">Critical Threat Mapping (OWASP Top 10 Standards)</li>
+
+                        <li class="lang-id">Eksplorasi Informasi Sumber Terbuka (OSINT)</li>
+                        <li class="lang-en">Passive Intelligence Gathering &amp; OSINT Tactics</li>
+
+                        <li class="lang-id">Penggunaan Burp Suite Community &amp; Manipulasi Paket</li>
+                        <li class="lang-en">Burp Suite Interception &amp; Request Manipulation</li>
+
+                        <li class="lang-id">Administrasi Terminal Linux &amp; Scripting Bash</li>
+                        <li class="lang-en">Debian / RedHat Linux CLI &amp; Automation Scripts</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3: E-Commerce Operations -->
+                <div class="sk-card fade-in">
+                    <div class="sk-header">
+                        <span class="sk-icon text-indigo"><i class="bi bi-cart3"></i></span>
+                        <h3 class="sk-title lang-id">Tata Kelola E-Commerce</h3>
+                        <h3 class="sk-title lang-en">E-Commerce Management</h3>
+                    </div>
+                    <!-- Menggunakan ordered list sesuai petunjuk struktur template -->
+                    <ol class="sk-list sk-ordered">
+                        <li class="lang-id"><strong class="text-white">Seller Center Optimization:</strong> Pengelolaan Tokopedia &amp; Shopee Seller Center</li>
+                        <li class="lang-en"><strong class="text-white">Store Administration:</strong> Digital Merchant Frontlines Operations</li>
+
+                        <li class="lang-id"><strong class="text-white">SEO &amp; Listings:</strong> Pengoptimalan deskripsi produk berbasis pencarian organik</li>
+                        <li class="lang-en"><strong class="text-white">Listing Logistics:</strong> Dynamic product metadata optimization</li>
+
+                        <li class="lang-id"><strong class="text-white">Stok Opname:</strong> Pemantauan akurasi stok (konsisten di &gt;98%)</li>
+                        <li class="lang-en"><strong class="text-white">Catalog Audit:</strong> Stock level audits with 98%+ real-time accuracy</li>
+
+                        <li class="lang-id"><strong class="text-white">Ritel Digital:</strong> Koordinasi kampanye musiman brand komputer</li>
+                        <li class="lang-en"><strong class="text-white">Promo Coordination:</strong> Lenovo, ASUS, MSI seasonal campaign setups</li>
+                    </ol>
+                </div>
+
+                <!-- Card 4: Soft Skills -->
+                <div class="sk-card fade-in">
+                    <div class="sk-header">
+                        <span class="sk-icon text-cyan"><i class="bi bi-lightbulb"></i></span>
+                        <h3 class="sk-title lang-id">Karakter &amp; Soft Skills</h3>
+                        <h3 class="sk-title lang-en">Core Human Values</h3>
+                    </div>
+                    <ol class="sk-list sk-ordered">
+                        <li class="lang-id"><strong class="text-white">Komunikasi:</strong> Menjelaskan opsi perbaikan hardware rumit secara sederhana</li>
+                        <li class="lang-en"><strong class="text-white">Clarifying Complex:</strong> Presenting network structures to non-technical users</li>
+
+                        <li class="lang-id"><strong class="text-white">Kemampuan Analitis:</strong> Melacak akar penyebab crash software tersembunyi</li>
+                        <li class="lang-en"><strong class="text-white">Root-Cause Analysis:</strong> Isolating erratic computer hardware errors</li>
+
+                        <li class="lang-id"><strong class="text-white">Ketelitian Detail:</strong> Menghindari cacat assembly pada komponen rapuh</li>
+                        <li class="lang-en"><strong class="text-white">Surgical Precision:</strong> Perfecting component alignments during assembly</li>
+
+                        <li class="lang-id"><strong class="text-white">Kerjasama Tim:</strong> Membantu tim retail mencapai target penjualan nasional</li>
+                        <li class="lang-en"><strong class="text-white">Consensual Teamwork:</strong> Harmonizing cross-functional retail objectives</li>
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience">
+        <div class="container">
+            <p class="sec-tag font-mono"><i class="bi bi-briefcase"></i> OPERATIONS HISTORY</p>
+            <h2 class="sec-title lang-id">Riwayat Kerja</h2>
+            <h2 class="sec-title lang-en">Professional Chronology</h2>
+            <p class="sec-sub lang-id">Pengalaman kerja nyata dalam merawat infrastruktur hardware &amp; menyusun data bisnis.</p>
+            <p class="sec-sub lang-en">Hands-on work experience in computer assembly line and commercial operations.</p>
+
+            <div style="margin-bottom: 24px;">
+                <button id="btn-add-experience" class="btn-more edit-only-control font-mono">
+                    <i class="bi bi-plus-circle-fill text-indigo"></i> TAMBAH RIWAYAT KERJA_
+                </button>
+            </div>
+
+            <div class="timeline" id="experience-timeline">
+
+                <!-- Pekerjaan 1: PT Visidata Inti Teknologi (Lenovo Store) -->
+                <div class="tl-item fade-in" id="static-exp-1">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <p class="tl-period font-mono"><i class="bi bi-calendar3"></i> AGUSTUS 2021 - SEKARANG</p>
+                        <h3 class="tl-role lang-id">Teknisi Komputer &amp; Pengelola Toko Online</h3>
+                        <h3 class="tl-role lang-en">IT Support Specialist &amp; E-Commerce Admin</h3>
+                        <p class="tl-company">PT Visidata Inti Teknologi - Lenovo Exclusive Store, Balikpapan</p>
+
+                        <p class="tl-sub font-mono">[01_HARDWARE.BAK] COMPUTER DESIGN &amp; DIAGNOSTICS</p>
+                        <ul>
+                            <li class="lang-id text-white">Merakit dan menguji kestabilan <strong>10 hingga 15 unit PC kustom kelas menengah-atas tiap bulan</strong>, berhasil memangkas rasio retur/error perangkat rakitan hingga ~20%.</li>
+                            <li class="lang-en text-white">Orchestrated structural system layouts for <strong>10 to 15 customized gaming &amp; content creator PCs monthly</strong>, successfully dropping terminal assembly error rates by ~20%.</li>
+
+                            <li class="lang-id">Melakukan diagnosa crash kritis, pemulihan data sektor terhapus, serta backup disk image drive dengan jaminan <strong>tanpa hilangnya data customer (zero data loss)</strong>.</li>
+                            <li class="lang-en">Diagnosed system hardware failures, conducted bare-metal recovery routines, and deployed sector backup images securing <strong>zero historical customer data loss</strong>.</li>
+
+                            <li class="lang-id">Mengedukasi lebih dari 50 pelanggan korporat dan pribadi mengenai cara mengoptimalkan performa hardware serta mencegah ancaman infeksi malware dasar.</li>
+                            <li class="lang-en">Instructed 50+ professional clients regarding physical maintenance systems and fundamental operating system defense mechanics.</li>
+                        </ul>
+
+                        <p class="tl-sub font-mono">[02_ECOMMERCE.LOG] LOGISTICS &amp; MERCHANDISE FRONT</p>
+                        <ul>
+                            <li class="lang-id text-white">Mengelola <strong>lebih dari 200 produk digital aktif (SKU)</strong> pada e-commerce Tokopedia &amp; Shopee Lenovo Authorized Store Balikpapan, dari perancangan aset tulisan hingga teknik optimasi kata kunci pencarian (SEO).</li>
+                            <li class="lang-en text-white">Maintained structural specifications catalogs for <strong>more than 200 distinct computer hardware products (SKUs)</strong> across official Tokopedia &amp; Shopee accounts.</li>
+
+                            <li class="lang-id">Memastikan presisi sinkronisasi jumlah stok fisik dengan etalase ritel online di tingkat akurasi <strong>98%+</strong> lewat skema pengauditan inventaris reguler mingguan.</li>
+                            <li class="lang-en">Sustained active inventory synchronization thresholds at an absolute audit level of <strong>98%+</strong> via coordinated weekly tracking schemes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Pekerjaan 2: Student Internship -->
+                <div class="tl-item alt fade-in" id="static-exp-2">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <p class="tl-period font-mono"><i class="bi bi-calendar3"></i> TAHUN 2019 - 2020</p>
+                        <h3 class="tl-role lang-id">Praktik Kerja Lapangan (PKL) Komputer</h3>
+                        <h3 class="tl-role lang-en">Industrial Technology Internship</h3>
+                        <p class="tl-company lang-id">Berbagai Instansi Pemerintah &amp; Swasta Strategis</p>
+                        <p class="tl-company lang-en">Selected State Institutions &amp; Corporate Sectors</p>
+                        
+                        <p class="tl-sub font-mono">CHRONOLOGICAL FIELD OPERATIONS</p>
+                        <ul>
+                            <li>
+                                <strong class="text-white">BBPPMPV BMTI Kemdikbud RI (Cimahi, Jabar):</strong> 
+                                <span class="lang-id">Instalasi jaringan lokal LAN, analisis arsitektur switch, dan pemetaan konfigurasi server workstation. (Jan - Feb 2020)</span>
+                                <span class="lang-en">LAN network architecture analysis, workstation cabling, and routing switch maps setups. (Jan - Feb 2020)</span>
+                            </li>
+                            <li>
+                                <strong class="text-white">PT Hexindo Adiperkasa Tbk (Balikpapan):</strong> 
+                                <span class="lang-id">Pemeliharaan hardware unit komputer korporat, pemecahan masalah printer, dan penyusunan database inventory internal. (Okt - Des 2019)</span>
+                                <span class="lang-en">Repairing office terminal physical assets, sorting device drivers, and listing warehouse hardware listings. (Oct - Dec 2019)</span>
+                            </li>
+                            <li>
+                                <strong class="text-white">POLDA Kalimantan Timur (Balikpapan):</strong> 
+                                <span class="lang-id">Asisten penunjang data divisi IT kepolisian, merawat database surat menyurat, dan audit stabilitas fungsional komputer pelayanan publik. (Jan - Apr 2019)</span>
+                                <span class="lang-en">IT helpdesk assistant, deploying administrative databases, and confirming terminal stability across government rooms. (Jan - Apr 2019)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION =====
+         section ini punya 3 tabel: formal academics, bootcamps, dan certifications.
+         struktur tabel: <table> > <thead> > <tr> > <th> untuk header kolom
+                         <table> > <tbody> > <tr> > <td> untuk isi data
+         <th> otomatis tebal dan rata tengah, <td> untuk data biasa -->
+    <section id="education">
+        <div class="container">
+            <p class="sec-tag font-mono"><i class="bi bi-mortarboard"></i> EDUCATION &amp; PATHS</p>
+            <h2 class="sec-title lang-id">Studi &amp; Sertifikasi</h2>
+            <h2 class="sec-title lang-en">Academics &amp; Clearance</h2>
+            <p class="sec-sub lang-id">Riwayat pendidikan akademik formal beserta sertifikasi industri IT dan siber siber yang telah diverifikasi.</p>
+            <p class="sec-sub lang-en">Verified academic milestones paired with professional security credentials.</p>
+
+            <!-- Tabel Formal Education -->
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; flex-wrap: wrap; gap: 12px;">
+                <h3 class="table-group-title font-mono" style="margin-bottom: 0;"><i class="bi bi-journal-bookmark-fill text-indigo"></i> FORMAL ACADEMICS</h3>
+                <button id="btn-add-academic" class="btn-more edit-only-control font-mono" style="margin: 0; padding: 6px 14px; font-size: 11px;">
+                    <i class="bi bi-plus-circle-fill text-indigo"></i> TAMBAH AKADEMIK
+                </button>
+            </div>
+            <div class="t-wrap fade-in">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th class="lang-id">Jenjang</th>
+                            <th class="lang-en">Degree</th>
+                            <th class="lang-id">Institusi Pendidikan</th>
+                            <th class="lang-en">Institution</th>
+                            <th class="lang-id">Fokus Jurusan</th>
+                            <th class="lang-en">Major</th>
+                            <th class="lang-id">Periode</th>
+                            <th class="lang-en">Period</th>
+                            <th class="lang-id">Status Studi</th>
+                            <th class="lang-en">Academic Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="academics-tbody">
+                        <tr id="static-acad-1">
+                            <td><strong class="text-white">S1 Informatik</strong></td>
+                            <td>Asia Cyber University (UNSIA)</td>
+                            <td class="lang-id">S1 Informatika (Kelas Online Resmi)</td>
+                            <td class="lang-en">Bachelor of Computer Science (Informatics)</td>
+                            <td><span class="badge-y font-mono">2023 - Present</span></td>
+                            <td class="text-green font-mono font-bold">IN_PROGRESS</td>
+                        </tr>
+                        <tr id="static-acad-2">
+                            <td><strong class="text-white">SMK (Vokasi)</strong></td>
+                            <td>SMKN 5 Balikpapan</td>
+                            <td class="lang-id">Teknik Komputer &amp; Jaringan (TKJ)</td>
+                            <td class="lang-en">Computer Network Engineering (TKJ)</td>
+                            <td><span class="badge-y font-mono">2017 - 2020</span></td>
+                            <td class="text-indigo font-mono font-bold">COMPLETED</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tabel Bootcamps -->
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 48px; margin-bottom: 12px; flex-wrap: wrap; gap: 12px;">
+                <h3 class="table-group-title font-mono" style="margin-top: 0; margin-bottom: 0;"><i class="bi bi-rocket-takeoff-fill text-indigo"></i> BOOTCAMPS &amp; INTENSIVE TRAINING</h3>
+                <button id="btn-add-bootcamp" class="btn-more edit-only-control font-mono" style="margin: 0; padding: 6px 14px; font-size: 11px;">
+                    <i class="bi bi-plus-circle-fill text-indigo"></i> TAMBAH BOOTCAMP
+                </button>
+            </div>
+            <div class="t-wrap fade-in">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th class="lang-id">Nama Program / Materi</th>
+                            <th class="lang-en">Bootcamp Title</th>
+                            <th class="lang-id">Penyelenggara / Institusi</th>
+                            <th class="lang-en">Provider / Organizer</th>
+                            <th class="lang-id">Fokus Kompetensi</th>
+                            <th class="lang-en">Core Competencies</th>
+                            <th class="lang-id">Periode</th>
+                            <th class="lang-en">Period</th>
+                            <th class="lang-id">Status</th>
+                            <th class="lang-en">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bootcamps-tbody">
+                        <tr id="static-boot-1">
+                            <td><strong class="text-white">Web-RTA &amp; Red Team Assessment</strong></td>
+                            <td>CyberWarFare Labs</td>
+                            <td class="lang-id">Eksploitasi Web Lanjut &amp; Rantai Serangan Multi-App (JWT, SQLi, XXE, OAuth)</td>
+                            <td class="lang-en">Advanced Web Exploitation &amp; Multi-App Attack Chain (JWT, SQLi, XXE, OAuth)</td>
+                            <td><span class="badge-y font-mono">2025 - 2026</span></td>
+                            <td class="text-green font-mono font-bold font-semibold">COMPLETED</td>
+                        </tr>
+                        <tr id="static-boot-2">
+                            <td><strong class="text-white">Bootcamp Penetrasi Keamanan SI</strong></td>
+                            <td>Merdeka Siber</td>
+                            <td class="lang-id">Sistem Keamanan Informasi, Pentesting Praktis &amp; Analisis Celahan (OWASP Top 10)</td>
+                            <td class="lang-en">Information Security Systems, Practical Pentesting &amp; Vulnerability Analysis</td>
+                            <td><span class="badge-y font-mono">2024</span></td>
+                            <td class="text-indigo font-mono font-semibold">COMPLETED</td>
+                        </tr>
+                        <tr id="static-boot-3">
+                            <td><strong class="text-white">Cybersec Career Starter &amp; Phishing Prevention</strong></td>
+                            <td>Hack &amp; Fix Academic</td>
+                            <td class="lang-id">Strategi Pencegahan Phishing, Rekayasa Sosial, Proteksi Kredensial &amp; Akun</td>
+                            <td class="lang-en">Phishing Prevention Strategies, Social Engineering, Account Protection</td>
+                            <td><span class="badge-y font-mono">2025</span></td>
+                            <td class="text-indigo font-mono font-semibold">COMPLETED</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Tabel Certifications -->
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 48px; margin-bottom: 12px; flex-wrap: wrap; gap: 12px;">
+                <h3 class="table-group-title font-mono" style="margin-top: 0; margin-bottom: 0;"><i class="bi bi-patch-check-fill text-cyan"></i> INDUSTRIAL CREDENTIALS</h3>
+                <button id="btn-add-cert" class="btn-more edit-only-control font-mono" style="margin: 0; padding: 6px 14px; font-size: 11px;">
+                    <i class="bi bi-plus-circle-fill text-cyan"></i> TAMBAH SERTIFIKASI
+                </button>
+            </div>
+            <div class="t-wrap fade-in">
+                <table class="custom-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">ID</th>
+                            <th class="lang-id">Nama Sertifikasi Profesional</th>
+                            <th class="lang-en">Certification Title</th>
+                            <th class="lang-id">Penerbit Sertifikat (Issuer)</th>
+                            <th class="lang-en">Credential Issuer</th>
+                            <th class="lang-id">Tanggal Rilis</th>
+                            <th class="lang-en">Date of Release</th>
+                        </tr>
+                    </thead>
+                    <tbody id="certs-tbody">
+                        <tr id="static-cert-1">
+                            <td class="font-mono text-dim">#01</td>
+                            <td><strong class="text-white">Certified Web Red Team Analyst (Web-RTA)</strong></td>
+                            <td><span class="badge-i font-mono">CyberWarFare Labs</span></td>
+                            <td><span class="badge-y font-mono">Januari 2026</span></td>
+                        </tr>
+                        <tr id="static-cert-2">
+                            <td class="font-mono text-dim">#02</td>
+                            <td>Certified Phishing Prevention Specialist (CPPS)</td>
+                            <td><span class="badge-i font-mono">Hack &amp; Fix</span></td>
+                            <td><span class="badge-y font-mono">Desember 2025</span></td>
+                        </tr>
+                        <tr id="static-cert-3">
+                            <td class="font-mono text-dim">#03</td>
+                            <td>Cybersecurity Career Starter Certification (CCSC)</td>
+                            <td><span class="badge-i font-mono">Hack &amp; Fix</span></td>
+                            <td><span class="badge-y font-mono">Desember 2025</span></td>
+                        </tr>
+                        <tr id="static-cert-4">
+                            <td class="font-mono text-dim">#04</td>
+                            <td>Critical Infrastructure Protection Analyst (ICIP)</td>
+                            <td><span class="badge-i font-mono">OPSWAT Academy</span></td>
+                            <td><span class="badge-y font-mono">Desember 2024</span></td>
+                        </tr>
+                        <tr id="static-cert-5">
+                            <td class="font-mono text-dim">#05</td>
+                            <td>Cybersecurity Awareness Professional Certificate (CAPC)</td>
+                            <td><span class="badge-i font-mono">CertiProf (International)</span></td>
+                            <td><span class="badge-y font-mono">Agustus 2024</span></td>
+                        </tr>
+                        <tr id="static-cert-6">
+                            <td class="font-mono text-dim">#06</td>
+                            <td>Fundamental Cyber Security Certification</td>
+                            <td><span class="badge-i font-mono">Coding Studio</span></td>
+                            <td><span class="badge-y font-mono">April 2024</span></td>
+                        </tr>
+                        <tr id="static-cert-7">
+                            <td class="font-mono text-dim">#07</td>
+                            <td>Introduction to Cybersecurity Pathway</td>
+                            <td><span class="badge-i font-mono">Cisco Networking Academy</span></td>
+                            <td><span class="badge-y font-mono">April 2024</span></td>
+                        </tr>
+                        <tr id="static-cert-8">
+                            <td class="font-mono text-dim">#08</td>
+                            <td>Linux Command Line administration</td>
+                            <td><span class="badge-i font-mono">Coding Studio</span></td>
+                            <td><span class="badge-y font-mono">Februari 2024</span></td>
+                        </tr>
+                        <tr id="static-cert-9">
+                            <td class="font-mono text-dim">#09</td>
+                            <td>IT Essentials Certificate - Hardware Support Intel</td>
+                            <td><span class="badge-i font-mono">Cisco Networking Academy</span></td>
+                            <td><span class="badge-y font-mono">Januari 2021</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AWARDS (HONORS) ===== -->
+    <section id="awards">
+        <div class="container">
+            <p class="sec-tag font-mono"><i class="bi bi-shield-lock-fill"></i> RECOGNIZED AUDITS</p>
+            <h2 class="sec-title lang-id">Apresiasi &amp; Validasi</h2>
+            <h2 class="sec-title lang-en">Vulnerability Badges</h2>
+            <p class="sec-sub lang-id">Laporan kerentanan web independen yang divalidasi dan dihargai oleh tim respon keamanan siber (CSIRT) pemerintah.</p>
+            <p class="sec-sub lang-en">Appreciation notes from official cybersecurity units for responsible vulnerability reporting.</p>
+
+            <div class="awards-grid">
+                
+                <!-- Penghargaan 1: BPOM RI -->
+                <div class="aw-card fade-in">
+                    <div class="aw-icon"><i class="bi bi-shield-check"></i></div>
+                    <h4 class="aw-title">Pusdatin BPOM RI</h4>
+                    <p class="aw-desc lang-id">
+                        <em>Apresiasi Keamanan Cyber:</em> Laporan celah traversal direktori admin dan paparan informasi pada portal resmi BPOM divalidasi dan diperbaiki dengan aman.
+                    </p>
+                    <p class="aw-desc lang-en">
+                        <em>Security Acknowledgment:</em> Verified administrative directory bypass vulnerability disclosure filed ethically on their central web domains folder.
+                    </p>
+                    <span class="badge-y font-mono">AGUSTUS 2024</span>
+                </div>
+
+                <!-- Penghargaan 2: Denpasar CSIRT -->
+                <div class="aw-card fade-in">
+                    <div class="aw-icon"><i class="bi bi-shield-check"></i></div>
+                    <h4 class="aw-title">Denpasar Municipal CSIRT</h4>
+                    <p class="aw-desc lang-id">
+                        <em>Piagam Penghargaan Resmi:</em> Atas partisipasi sukarela mengidentifikasi dan melaporkan kerentanan SQL Injection kritis pada subdomain administrasi perkotaan.
+                    </p>
+                    <p class="aw-desc lang-en">
+                        <em>Certificate of Appreciation:</em> Awarded for successfully reporting SQL Injection structures within subdomain configurations in the public system database.
+                    </p>
+                    <span class="badge-y font-mono">TAHUN 2024</span>
+                </div>
+
+                <!-- Penghargaan 3: Banyuwangi CSIRT -->
+                <div class="aw-card fade-in">
+                    <div class="aw-icon"><i class="bi bi-shield-check"></i></div>
+                    <h4 class="aw-title">Banyuwangi CSIRT</h4>
+                    <p class="aw-desc lang-id">
+                        <em>Sertifikat Kontribusi Siber:</em> Memperoleh pengakuan resmi atas audit kerentanan logis bypass kontrol akses yang dapat berakibat kebocoran parameter SKU.
+                    </p>
+                    <p class="aw-desc lang-en">
+                        <em>Vulnerability Recognition:</em> Contributed valid authentication bypass patches relating to local infrastructure frameworks for public databases.
+                    </p>
+                    <span class="badge-y font-mono">SEPTEMBER 2024</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WRITING ===== -->
+    <section id="writing">
+        <div class="container">
+            <p class="sec-tag font-mono"><i class="bi bi-journal-text"></i> RECENT ARTICLES</p>
+            <h2 class="sec-title lang-id">Catatan &amp; Tulisan Siber</h2>
+            <h2 class="sec-title lang-en">Latest Publication Logs</h2>
+            <p class="sec-sub lang-id">Berbagi pengetahuan, ulasan sertifikasi, dan tips praktis seputar cybersecurity yang dipublikasikan di Medium.</p>
+            <p class="sec-sub lang-en">Detailed walk-through writeups sharing vulnerability analysis and technical study summaries.</p>
+
+            <div class="writing-grid">
+
+                <!-- Artikel 1: WEB-RTA review -->
+                <a href="https://medium.com/system-weakness/review-web-rta-exam-mastering-the-multi-app-attack-chain-b19879f6df70"
+                   target="_blank" class="w-card fade-in">
+                    <img src="https://miro.medium.com/v2/resize:fill:320:214/1*4hNw9BjVfWW5MSWqjY7JdA.png"
+                         alt="Sertifikat Web-RTA CyberWarfare Labs exam review banner" class="w-thumb" referrerpolicy="no-referrer">
+                    <div class="w-body">
+                        <div class="w-meta">
+                            <span class="w-tag font-mono">REVIEW</span>
+                            <span class="w-date font-mono">JAN 2026</span>
+                        </div>
+                        <h3 class="w-title lang-id">[Review] Ujian WEB-RTA: Menguasai Attack Chain Multi-Aplikasi</h3>
+                        <h3 class="w-title lang-en">[Review] WEB-RTA Exam: Mastering the Multi-App Attack Chain</h3>
+                        <p class="w-desc lang-id">Bagaimana saya merangkai celah keamanan JWT, SQLi, XXE, dan celah otorisasi OAuth untuk mengkompromikan seluruh server ujian.</p>
+                        <p class="w-desc lang-en">Chaining JWT misconfigurations, SQLi, XXE, and broken OAuth mechanisms to achieve root shell level compromise during red team exam.</p>
+                        <span class="w-link font-mono">Read Article</span>
+                    </div>
+                </a>
+
+                <!-- Artikel 2: Phishing ways -->
+                <a href="https://medium.com/system-weakness/5-easy-ways-to-spot-a-phishing-email-even-if-youre-not-a-cybersecurity-expert-%EF%B8%8F-248c2eae604f"
+                   target="_blank" class="w-card fade-in">
+                    <img src="https://miro.medium.com/v2/resize:fill:320:214/1*XAJM2HZ8PKd3L85JP6APTQ@2x.jpeg"
+                         alt="Phishing Email Awareness Cover" class="w-thumb" referrerpolicy="no-referrer">
+                    <div class="w-body">
+                        <div class="w-meta">
+                            <span class="w-tag font-mono">AWARENESS</span>
+                            <span class="w-date font-mono">MAY 2025</span>
+                        </div>
+                        <h3 class="w-title lang-id">5 Langkah Mudah Mendeteksi Email Palsu (Phishing)</h3>
+                        <h3 class="w-title lang-en">5 Easy Ways to Spot a Phishing Email</h3>
+                        <p class="w-desc lang-id">Panduan pertahanan praktis bagi awam untuk membedakan email kerja asli dari jebakan rekayasa sosial manipulatif.</p>
+                        <p class="w-desc lang-en">Identify social engineering vectors and visual spoofing clues inside headers without analytical background tools.</p>
+                        <span class="w-link font-mono">Read Article</span>
+                    </div>
+                </a>
+
+                <!-- Artikel 3: First XSS Writeup -->
+                <a href="https://medium.com/@heyrm/writeup-discovering-and-exploiting-xss-vulnerabilities-my-first-bug-hunting-reward-0dfb0ebfd6aa"
+                   target="_blank" class="w-card fade-in">
+                    <img src="https://miro.medium.com/v2/resize:fill:320:214/1*JvhTiBXsSsE6ntR1Q22A8A.png"
+                         alt="XSS first payload research screenshot Cover" class="w-thumb" referrerpolicy="no-referrer">
+                    <div class="w-body">
+                        <div class="w-meta">
+                            <span class="w-tag font-mono">WRITEUP</span>
+                            <span class="w-date font-mono">JUN 2024</span>
+                        </div>
+                        <h3 class="w-title lang-id">Celah XSS Pertama Saya: Perjalanan Mencari Bug Sampai Dapat Reward</h3>
+                        <h3 class="w-title lang-en">XSS Vulnerabilities: My First Bug Hunting Reward</h3>
+                        <p class="w-desc lang-id">Dokumentasi taktis saat melakukan auditing parameter input tidak tervalidasi yang melahirkan serangan scripting lintas situs.</p>
+                        <p class="w-desc lang-en">A thorough breakdown of cross-site scripting discovery within poorly validated client text nodes yielding a bug award.</p>
+                        <span class="w-link font-mono">Read Article</span>
+                    </div>
+                </a>
+
+                <!-- Artikel 4: Blue Team Labs Phishing analysis writeup -->
+                <a href="https://medium.com/@heyrm/blue-team-labs-online-phishing-analysis-writeup-69df49e132c1"
+                   target="_blank" class="w-card fade-in">
+                    <img src="https://miro.medium.com/v2/resize:fill:320:214/1*KL-xpoGS_Pkonqdu1XY0JA.png"
+                         alt="Blue Team Labs e-mail analysis writeup Cover" class="w-thumb" referrerpolicy="no-referrer">
+                    <div class="w-body">
+                        <div class="w-meta">
+                            <span class="w-tag font-mono">ANALYSIS</span>
+                            <span class="w-date font-mono">AUG 2024</span>
+                        </div>
+                        <h3 class="w-title lang-id">Blue Team Labs: Analisis Forensik Lampiran Email Melalui Lab Online</h3>
+                        <h3 class="w-title lang-en">Blue Team Labs Online: Phishing Analysis Writeup</h3>
+                        <p class="w-desc lang-id text-slate">Bedah kasus forensik taktis: mengupas lampiran berbahaya dan melacak pengirim menggunakan tools Blue Team.</p>
+                        <p class="w-desc lang-en">Interactive incident response writeup documenting header investigation and attachment file hash checks.</p>
+                        <span class="w-link font-mono">Read Article</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Tombol Muat Lebih Banyak dari Medium -->
+            <div style="text-align: center; margin-top: 36px;">
+                <a href="https://medium.com/@heyrm" target="_blank" class="btn-more font-mono">
+                    <i class="bi bi-grid-3x3-gap-fill text-indigo"></i>
+                    <span class="lang-id">LIHAT SEMUA ARTIKEL</span>
+                    <span class="lang-en">EXPLORE ALL WRITEUPS</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== GALLERY =====
+         layout masonry menggunakan CSS columns (column-count: 3).
+         tiap item punya data-src (URL fullsize), data-caption, data-cat untuk filter.
+         JS mendeteksi klik pada item dan buka lightbox fullscreen -->
+    <section id="gallery">
+        <div class="container">
+            <p class="sec-tag font-mono"><i class="bi bi-images"></i> VISUAL RECORD</p>
+            <h2 class="sec-title lang-id">Galeri </h2>
+            <h2 class="sec-title lang-en">Gallery</h2>
+            <p class="sec-sub lang-id">Dokumentasi otentik keikutsertaan Acara, perakitan perangkat, dan lisensi siber. Klik untuk pembesaran.</p>
+            <p class="sec-sub lang-en">A visual registry of certifications, hardware assembly lines, and workshop achievements.</p>
+
+            <!-- Kategori Filter -->
+            <div class="gallery-filters">
+                <button class="f-btn active font-mono" data-filter="all">
+                    <span class="lang-id">Semua</span>
+                    <span class="lang-en">All</span>
+                </button>
+                <button class="f-btn font-mono" data-filter="certs">
+                    <span class="lang-id">Lisensi &amp; Apresiasi</span>
+                    <span class="lang-en">Certs &amp; Awards</span>
+                </button>
+                <button class="f-btn font-mono" data-filter="docs">
+                    <span class="lang-id">Dokumentasi</span>
+                    <span class="lang-en">Documentation</span>
+                </button>
+            </div>
+
+            <!-- Masonry Grid untuk Visual Galeri -->
+            <div class="masonry-grid" id="gallery-masonry-wrapper">
+
+                <!-- SERTIFIKASI -->
+
+                <!-- Item 1: WEB-RTA CyberWarFare Labs -->
+                <div class="m-item" id="static-photo-1" data-src="media/Rizal Maulana - WEB-RTA Cert_page-0001.jpg" data-caption="Sertifikat keahlian Analis Red Team Web - CyberWarfare Labs (Web-RTA)" data-cat="certs">
+                    <img src="media/Rizal Maulana - WEB-RTA Cert_page-0001.jpg" alt="Web Red Team Analyst Certification badge from CyberWarFare Labs" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">WEB-RTA Certification CWFL</span>
+                    </div>
+                </div>
+
+                <!-- Item 2: CRPO EU Cyber Academy -->
+                <div class="m-item" id="static-photo-2" data-src="media/CRPO.jpg" data-caption="Sertifikat Keahlian Analis Ransomware protection Officer (CRPO) - EU Cyber Academy" data-cat="certs">
+                    <img src="media/CRPO.jpg" alt="Certified Ransomware protection Officer (CRPO) - EU Cyber Academy" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Certified Ransomware protection Officer (CRPO) - EU Cyber Academy</span>
+                    </div>
+                </div>
+
+                <!-- Item 3: CPPS Hack and Fix -->
+                <div class="m-item" id="static-photo-3" data-src="media/CPPS.jpg" data-caption="Sertifikat Khusus Kelulusan Certified Phishing Prevention Specialist (CPPS) - Hack n Fix" data-cat="certs">
+                    <img src="media/CPPS.jpg" alt="Certified Phishing Prevention Specialist (CPPS) - Hack n Fix" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Certified Phishing Prevention Specialist (CPPS) - Hack n Fix</span>
+                    </div>
+                </div>
+                
+
+                <!-- Item 4: Sertifikat CSIRT Banyuwangi -->
+                <div class="m-item" id="static-photo-4" data-src="media/Sertifikat CSIRT  BWi Rizal_page-0001.jpg" data-caption="Sertifikat Apresiasi dari CSIRT Kabupaten Banyuwangi" data-cat="certs">
+                    <img src="media/Sertifikat CSIRT  BWi Rizal_page-0001.jpg" alt="Sertifikat Apresiasi dari CSIRT Kabupaten Banyuwangi" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Sertifikat Apresiasi dari CSIRT Kabupaten Banyuwangi</span>
+                    </div>
+                </div>
+
+                <!-- Item 5: Sertifikat CSIRT Denpasar -->
+                <div class="m-item" id="static-photo-5" data-src="media/Sertifikat CSIRT  denpasar  Rizal_page-0001.jpg" data-caption="Sertifikat Apresiasi dari CSIRT Kota Denpasar" data-cat="certs">
+                    <img src="media/Sertifikat CSIRT  denpasar  Rizal_page-0001.jpg" alt="Sertifikat Apresiasi dari CSIRT Kota Denpasar" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Sertifikat Apresiasi dari CSIRT Kabupaten Banyuwangi</span>
+                    </div>
+                </div>
+
+                <!-- Item 6: Sertifikat CSIRT BPOM -->
+                <div class="m-item" id="static-photo-6" data-src="media/bpom.jpg" data-caption="Sertifikat Apresiasi dari CSIRT BPOM" data-cat="certs">
+                    <img src="media/bpom.jpg" alt="Sertifikat Apresiasi dari CSIRT BPOM" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Sertifikat Apresiasi dari CSIRT BPOM</span>
+                    </div>
+                </div>
+
+                <!-- Item 7: Vuln disclosure government letter -->
+                <div class="m-item" id="static-photo-7" data-src="media/merdeka siber.jpg" data-caption="Peserta terpilih Bootcamp Penetrasi Keamanan Sistem Informasi Merdeka Siber 2024" data-cat="certs">
+                    <img src="media/merdeka siber.jpg" alt="Peserta terpilih Bootcamp Penetrasi Keamanan Sistem Informasi Merdeka Siber 2024" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Peserta terpilih Bootcamp Penetrasi Keamanan Sistem Informasi Merdeka Siber 2024</span>
+                    </div>
+                </div>
+
+
+
+                <!-- KEGIATAN -->
+
+                <!-- Item 1: Lenovo Accelerate 2026 -->
+                <div class="m-item" id="static-photo-8" data-src="media/accelerate1.jpeg" data-caption="Lenovo Accelerate 2026" data-cat="docs">
+                    <img src="media/accelerate1.jpeg" alt="Lenovo Accelerate 2026" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Lenovo Accelerate 2026 #1</span>
+                    </div>
+                </div>
+
+                <div class="m-item" id="static-photo-9" data-src="media/accelerate2.jpeg" data-caption="Lenovo Accelerate 2026" data-cat="docs">
+                    <img src="media/accelerate2.jpeg" alt="Lenovo Accelerate 2026" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Lenovo Accelerate 2026 #2</span>
+                    </div>
+                </div>
+
+                <div class="m-item" id="static-photo-10" data-src="media/accelerate3.jpeg" data-caption="Lenovo Accelerate 2026" data-cat="docs">
+                    <img src="media/accelerate3.jpeg" alt="Lenovo Accelerate 2026" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Lenovo Accelerate 2026 #3</span>
+                    </div>
+                </div>
+
+                <!-- Item 2: Synex X visidata 2026 -->
+                <div class="m-item" id="static-photo-11" data-src="media/synex2026 (1).jpeg" data-caption="Synex X Visidata 2026" data-cat="docs">
+                    <img src="media/synex2026 (1).jpeg" alt="Synex X Visidata" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Kolaborasi PT Synex Metrodata Indonesia & PT Visidata Inti Teknologi 2026 #1</span>
+                    </div>
+                </div>
+
+                <div class="m-item" id="static-photo-12" data-src="media/synex2026 (2).jpeg" data-caption="Synex X Visidata 2026" data-cat="docs">
+                    <img src="media/synex2026 (2).jpeg" alt="Synex X Visidata" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Kolaborasi PT Synex Metrodata Indonesia & PT Visidata Inti Teknologi 2026 #2</span>
+                    </div>
+                </div>
+
+                <!-- Item 3: Galeri Aktivitas -->
+                <div class="m-item" id="static-photo-13" data-src="media/act1.jpeg" data-caption="Dokumentasi Kegiatan" data-cat="docs">
+                    <img src="media/act1.jpeg" alt="Dokumentasi Kegiatan" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Dokumentasi Kegiatan #1/span>
+                    </div>
+                </div>
+
+                <div class="m-item" id="static-photo-14" data-src="media/act2.jpeg" data-caption="Dokumentasi Kegiatan" data-cat="docs">
+                    <img src="media/act2.jpeg" alt="Dokumentasi Kegiatan" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Dokumentasi Kegiatan #2</span>
+                    </div>
+                </div>
+
+                <div class="m-item" id="static-photo-15" data-src="media/act3.jpeg" data-caption="Dokumentasi Kegiatan" data-cat="docs">
+                    <img src="media/act3.jpeg" alt="Dokumentasi Kegiatan" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Dokumentasi Kegiatan #3</span>
+                    </div>
+                </div>
+
+                <div class="m-item" id="static-photo-16" data-src="media/act4.jpeg" data-caption="Dokumentasi Kegiatan" data-cat="docs">
+                    <img src="media/act4.jpeg" alt="Dokumentasi Kegiatan" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Dokumentasi Kegiatan #4</span>
+                    </div>
+                </div>
+
+                <div class="m-item" id="static-photo-17" data-src="media/act5.jpeg" data-caption="Dokumentasi Kegiatan" data-cat="docs">
+                    <img src="media/act5.jpeg" alt="Dokumentasi Kegiatan" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Dokumentasi Kegiatan #5</span>
+                    </div>
+                </div>
+
+                <div class="m-item" id="static-photo-18" data-src="media/act6.jpeg" data-caption="Dokumentasi Kegiatan" data-cat="docs">
+                    <img src="media/act6.jpeg" alt="Dokumentasi Kegiatan" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Dokumentasi Kegiatan #6</span>
+                    </div>
+                </div>
+
+                <div class="m-item" id="static-photo-19" data-src="media/act7.jpeg" data-caption="Dokumentasi Kegiatan" data-cat="docs">
+                    <img src="media/act7.jpeg" alt="Dokumentasi Kegiatan" referrerpolicy="no-referrer">
+                    <div class="m-overlay">
+                        <span class="m-cap font-mono">Dokumentasi Kegiatan #7</span>
+                    </div>
+                </div>
+
+
+
+                <!-- Unit Tambah Foto (Usability Pattern: file upload dengan drag-and-drop & manual click) -->
+                <div class="m-placeholder" id="add-photo-placeholder" data-cat="all">
+                    <i class="bi bi-plus-circle text-cyan"></i>
+                    <span class="text-white font-bold lang-id">Tambah Foto</span>
+                    <span class="text-white font-bold lang-en">Upload Photo</span>
+                    <span class="text-dim text-center font-mono lang-id">(Lokal Storage)</span>
+                    <span class="text-dim text-center font-mono lang-en">(Local Sandbox)</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DESIGNATED FILE UPLOAD DIALOG (MODAL TAMBAH FOTO) ===== -->
+    <div id="upload-dialog" class="custom-modal-overlay">
+        <div class="upload-modal-content">
+            <button id="upload-dialog-close" class="modal-close-btn" aria-label="Close upload form">&#x2715;</button>
+            
+            <h3 class="modal-title font-mono text-cyan">
+                <i class="bi bi-cloud-upload-fill"></i>
+                <span class="lang-id">TAMBAH FOTO BARU</span>
+                <span class="lang-en">UPLOAD NEW PHOTO</span>
+            </h3>
+            <p class="modal-subtitle lang-id">Simpan foto kegiatan atau sertifikat baru Anda langsung ke memori lokal browser.</p>
+            <p class="modal-subtitle lang-en">Securely write dynamic certificates or system photos in your browser local storage.</p>
+
+            <form id="gallery-upload-form" class="upload-form">
+                
+                <!-- Dropbox Drag & Drop Area -->
+                <div class="upload-drag-zone flex-center flex-column" id="upload-drag-zone">
+                    <i class="bi bi-image-fill text-indigo" style="font-size: 32px; margin-bottom: 8px;"></i>
+                    <p class="drag-zone-text text-white lang-id">Tarik foto ke sini atau <span>klik untuk memilih file</span></p>
+                    <p class="drag-zone-text text-white lang-en">Drag your image file here or <span>browse files</span></p>
+                    <p class="drag-zone-subinfo lang-id">Maksimal resolusi ideal (Square/Landscape) JPG/PNG</p>
+                    <p class="drag-zone-subinfo lang-en">Accepts typical JPG/PNG formats</p>
+                    <input type="file" id="upload-file-input" accept="image/*" style="display: none;">
+                </div>
+
+                <!-- Preview Area / Loading indicator feedback -->
+                <div id="upload-preview-area" class="upload-preview-zone hidden">
+                    <div class="preview-img-container">
+                        <img id="upload-preview-img" src="" alt="Live Client Preview Thumbnail">
+                        <button type="button" id="remove-preview-btn"><i class="bi bi-trash"></i></button>
+                    </div>
+                </div>
+
+                <!-- Input Deskripsi/Keterangan -->
+                <div class="form-group row-spacing">
+                    <label for="form-photo-caption" class="font-mono lang-id">KETERANGAN / CAPTION</label>
+                    <label for="form-photo-caption" class="font-mono lang-en">LIVE TITLE / CAPTION</label>
+                    <input type="text" id="form-photo-caption" placeholder="Contoh: Merakit server Lenovo v2" required>
+                </div>
+
+                <!-- Seleksi Kategori -->
+                <div class="form-group">
+                    <label for="form-photo-category" class="font-mono lang-id">KATEGORI</label>
+                    <label for="form-photo-category" class="font-mono lang-en">CATEGORY SECTION</label>
+                    <select id="form-photo-category" class="font-mono">
+                        <option value="certs" class="lang-id">Lisensi &amp; Apresiasi</option>
+                        <option value="certs" class="lang-en">Clearance &amp; Certs</option>
+                        <option value="kegiatan" class="lang-id">Kegiatan Lapangan</option>
+                        <option value="kegiatan" class="lang-en">Operational Tasks</option>
+                    </select>
+                </div>
+
+                <!-- Aksi Submit Form -->
+                <button type="submit" class="btn-solid w-100 flex-center" style="margin-top: 18px;">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="lang-id">INTEGRASIKAN FOTO</span>
+                    <span class="lang-en">SAVE AND DEPLOY</span>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== DESIGNATED ADMIN ITEM UPDATE DIALOG ===== -->
+    <div id="admin-item-dialog" class="custom-modal-overlay">
+        <div class="upload-modal-content">
+            <button id="admin-dialog-close" class="modal-close-btn" aria-label="Close form">&#x2715;</button>
+            
+            <h3 class="modal-title font-mono text-cyan" id="admin-modal-title">
+                <i class="bi bi-plus-circle-fill"></i>
+                <span class="lang-id">TAMBAH DATA BARU</span>
+                <span class="lang-en">ADD NEW DATA</span>
+            </h3>
+            <p class="modal-subtitle lang-id">Simpan data baru Anda langsung ke memori lokal browser.</p>
+            <p class="modal-subtitle lang-en">Securely write new dynamic data to your browser local storage.</p>
+
+            <form id="admin-item-form" class="upload-form">
+                <input type="hidden" id="admin-item-type">
+
+                <!-- Field 1 -->
+                <div class="form-group row-spacing">
+                    <label id="admin-lbl-field1" class="font-mono">FIELD 1 (ID)</label>
+                    <input type="text" id="admin-val-field1" required>
+                </div>
+
+                <!-- Field 1 EN -->
+                <div class="form-group row-spacing">
+                    <label id="admin-lbl-field1-en" class="font-mono">FIELD 1 (EN)</label>
+                    <input type="text" id="admin-val-field1-en" required>
+                </div>
+
+                <!-- Field 2 -->
+                <div class="form-group row-spacing">
+                    <label id="admin-lbl-field2" class="font-mono">FIELD 2</label>
+                    <input type="text" id="admin-val-field2" required>
+                </div>
+
+                <!-- Field 3 -->
+                <div class="form-group row-spacing">
+                    <label id="admin-lbl-field3" class="font-mono">FIELD 3</label>
+                    <input type="text" id="admin-val-field3" required>
+                </div>
+
+                <!-- Field 4 -->
+                <div class="form-group row-spacing" id="admin-group-field4">
+                    <label id="admin-lbl-field4" class="font-mono">FIELD 4 (ID)</label>
+                    <textarea id="admin-val-field4" rows="3" placeholder="Gunakan baris baru untuk memisahkan point..."></textarea>
+                </div>
+
+                <!-- Field 4 EN -->
+                <div class="form-group row-spacing" id="admin-group-field4-en">
+                    <label id="admin-lbl-field4-en" class="font-mono">FIELD 4 (EN)</label>
+                    <textarea id="admin-val-field4-en" rows="3" placeholder="Use new lines to separate bullet points..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-solid w-100 flex-center" style="margin-top: 18px;">
+                    <i class="bi bi-check-circle-fill"></i>
+                    <span class="lang-id">SIMPAN DATA</span>
+                    <span class="lang-en">SAVE AND UPDATE</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== LIGHTBOX MODAL FULLSCREEN VIEW ===== -->
+    <div id="lightbox">
+        <button id="lb-close" class="font-mono" aria-label="Close fullscreen view"><i class="bi bi-x-lg"></i> <span class="lang-id">Tutup</span><span class="lang-en">Close</span></button>
+        <button id="lb-prev" aria-label="Previous photo"><i class="bi bi-chevron-left"></i></button>
+        <img id="lb-img" src="" alt="Fullscreen image rendering dialog modal container" referrerpolicy="no-referrer">
+        <button id="lb-next" aria-label="Next photo"><i class="bi bi-chevron-right"></i></button>
+        <div id="lb-caption" class="font-mono">Caption goes here.</div>
+    </div>
+
+    <!-- ===== FOOTER + CONTACT =====
+         section contact digabung ke footer supaya lebih simpel.
+         hanya menampilkan email (mailto) dan LinkedIn (link eksternal) sesuai permintaan.
+         tidak ada form, tidak ada blok terminal kode, bersih dan straightforward -->
+    <footer id="contact">
+        <div class="container footer-inner">
+
+            <!-- kolom kiri: nama dan link kontak -->
+            <div class="footer-left">
+            <div class="footer-top">
+                <p class="footer-name">Rizal Maulana</p>
+                <p class="footer-tagline font-mono">
+                    <span class="lang-id">IT Support &amp; Cybersecurity Specialist - Balikpapan</span>
+                    <span class="lang-en">IT Support &amp; Cybersecurity Specialist - Balikpapan</span>
+                </p>
+            </div>
+
+            <!-- baris tengah: dua link kontak utama -->
+            <!-- mailto: membuka aplikasi email bawaan sistem dengan alamat tujuan sudah terisi -->
+            <div class="footer-links">
+                <a href="mailto:rizal144maulana@gmail.com" class="footer-contact-btn">
+                    <i class="bi bi-envelope-fill"></i>
+                    <span>rizal144maulana@gmail.com</span>
+                </a>
+                <!-- link eksternal ke LinkedIn, target="_blank" buka di tab baru -->
+                <a href="https://linkedin.com/in/rizlmaulanaa" target="_blank" class="footer-contact-btn">
+                    <i class="bi bi-linkedin"></i>
+                    <span>linkedin.com/in/rizlmaulanaa</span>
+                </a>
+        </div>
+        </div><!-- tutup footer-left -->
+
+        <!-- kolom kanan: copyright dan back to top -->
+        <div class="footer-right font-mono">
+            <div class="footer-bottom font-mono">
+                <p class="footer-copy">&copy; 2026 Rizal Maulana. All rights reserved.</p>
+                <a href="#hero" class="go-top-link">
+                    <i class="bi bi-caret-up-fill"></i>
+                    <span class="lang-id">Kembali ke atas</span>
+                    <span class="lang-en">Back to top</span>
+                </a>
+        </div><!-- tutup footer-right -->
+
+        </div>
+    </footer>
+
+
+    <!-- Script Pure Vanilla JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
