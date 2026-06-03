@@ -17,7 +17,6 @@ This site serves as a central hub for my professional profile, covering my backg
 - **Bilingual**- full Indonesian and English support with preference saved to localStorage
 - **Dynamic typewriter**- hero role text cycles between IT Support, Cybersecurity, and E-Commerce Admin
 - **Masonry gallery**- filterable photo grid with fullscreen lightbox
-- **Admin / edit mode**- accessible via `#zalhere` hash for adding and managing dynamic content without a backend
 - **LocalStorage persistence**- custom-added entries (experience, certifications, gallery photos) survive page refreshes
 - **Drag & drop photo upload**- add gallery items directly from the browser
 - **Fully static**- no server, no framework, no build tool required
