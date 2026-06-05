@@ -2,7 +2,7 @@
  
 Personal portfolio website of **Rizal Maulana**, IT Support Technician and Cybersecurity Learner based in Balikpapan, East Kalimantan.
  
-Live site: [rizalmaulana.github.io/portfolio](https://rizalmaulana.github.io/portfolio)
+Live site: [rizlmaulanaa.github.io/portofolio/](https://rizlmaulanaa.github.io/portofolio/)
  
 ---
  
