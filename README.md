@@ -1,5 +1,7 @@
 # Portofolio Rizal Maulana
 
+[![Deploy situs ke GitHub Pages](https://github.com/rizlmaulanaa/portofolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/rizlmaulanaa/portofolio/actions/workflows/deploy.yml)
+
 Situs portofolio pribadi dengan panel admin lokal. Dibangun dengan Astro dan berjalan statis.
 
 - Situs: https://rizlmaulanaa.github.io/portofolio/
