@@ -5,6 +5,11 @@
   var el = A.el, H = window.__helpers;
   var fileHead = H.headBlock;
 
+  /** URL gambar di panel. Ikuti BASE_PATH pada astro.config.mjs: kosong saat
+      situs disajikan di root domain, atau '/portofolio' bila beralih ke sub-path. */
+  var BASE_PATH = '';
+  function mediaUrl(name) { return BASE_PATH + '/media/' + String(name).replace(/^\/+/, ''); }
+
   function removeTool(list, file) {
     return function (i) {
       return el('button', {
@@ -212,7 +217,7 @@
         A.clear(strip);
         (al.photos || []).forEach(function (p, j) {
           var t = el('div', { class: 'thumb', draggable: 'true' },
-            el('img', { src: '/portofolio/media/' + p.src, alt: '', loading: 'lazy' }),
+            el('img', { src: mediaUrl(p.src), alt: '', loading: 'lazy' }),
             el('button', {
               class: 'rm', type: 'button', text: '×', title: 'Keluarkan dari album',
               onclick: function () { al.photos.splice(j, 1); A.dirty.albums = true; A.refreshStatus(); paintStrip(); },
@@ -306,7 +311,7 @@
     var grid = el('div', { class: 'media-grid' });
     (A.media || []).forEach(function (m) {
       grid.appendChild(el('div', { class: 'media-item' },
-        el('div', { class: 'media-thumb' }, el('img', { src: '/portofolio/media/' + m.name, alt: '', loading: 'lazy' })),
+        el('div', { class: 'media-thumb' }, el('img', { src: mediaUrl(m.name), alt: '', loading: 'lazy' })),
         el('div', { class: 'media-meta' },
           el('span', { class: 'media-name', text: m.name }),
           el('span', { class: 'media-size', text: ukuranBerkas(m.size) }),

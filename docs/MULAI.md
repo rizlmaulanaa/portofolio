@@ -15,9 +15,9 @@ Dependensi hanya Astro dan sharp (pemroses gambar), jadi instalasi ringan.
 
 | Perintah | Fungsi | Alamat |
 | --- | --- | --- |
-| `npm run preview` | menyajikan hasil build statis | http://localhost:4321/portofolio/ |
+| `npm run preview` | menyajikan hasil build statis | http://localhost:4321/ |
 | `npm run admin` | panel admin untuk mengubah konten | http://localhost:4322/admin |
-| `npm run dev` | mode pengembangan, pembaruan langsung | http://localhost:4321/portofolio/ |
+| `npm run dev` | mode pengembangan, pembaruan langsung | http://localhost:4321/ |
 | `npm run build` | membangun `dist/` sekali jalan | tanpa server |
 
 Untuk pekerjaan harian, jalankan dua proses berikut di dua terminal:
@@ -29,11 +29,15 @@ npm run admin
 
 ## Aturan alamat
 
-`astro.config.mjs` menetapkan `base: '/portofolio'` dan `trailingSlash: 'ignore'`. Konsekuensinya:
+`astro.config.mjs` tidak memakai base path karena situs disajikan di root domain `heyrm.my.id`, baik saat tayang maupun saat pratinjau lokal. `trailingSlash` disetel `ignore`, jadi alamat dengan atau tanpa garis miring di akhir sama sama sah.
 
-- Semua halaman dan aset disajikan di bawah `/portofolio/`.
-- Membuka `http://localhost:4321/` akan menghasilkan 404. Ini normal, bukan kerusakan.
+Konsekuensinya:
+
+- Pratinjau lokal terbuka di `http://localhost:4321/`.
+- Semua aset disajikan dari root, tidak ada sub-folder khusus.
 - Panel admin hanya mendengarkan di `127.0.0.1` dan tidak pernah ikut ter-deploy.
+
+Jika kelak berpindah ke sub-path seperti `heyrm.my.id/portofolio`, isi `base` kembali di `astro.config.mjs` dan samakan `BASE_PATH` di `admin/server.mjs` serta `admin/ui/admin-more.js`.
 
 ## Port
 

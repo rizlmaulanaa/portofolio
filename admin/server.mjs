@@ -14,8 +14,9 @@ const MEDIA_DIR = join(ROOT, 'public', 'media');
 const BACKUP_DIR = join(ROOT, '.admin-backups');
 const UI_DIR = join(ROOT, 'admin', 'ui');
 const PORT = Number(process.env.ADMIN_PORT || 4322);
-/** Harus selaras dengan `base` di astro.config.mjs. */
-const BASE_PATH = '/portofolio';
+/** Harus selaras dengan `base` di astro.config.mjs. Saat ini tanpa base path,
+    yaitu situs disajikan di root domain. Kosong bila konfigurasi berubah. */
+const BASE_PATH = '';
 
 const CONTENT_FILES = ['site', 'labels', 'work', 'experience', 'skills',
   'credentials', 'awards', 'writing', 'albums'];

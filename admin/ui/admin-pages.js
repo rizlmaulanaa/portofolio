@@ -108,7 +108,7 @@
         el('div', { class: 'check', text: 'Buka tab di kiri, ubah teks atau foto yang diinginkan.' }),
         el('div', { class: 'check', text: 'Klik Simpan perubahan. Cadangan otomatis dibuat di .admin-backups/.' }),
         el('div', { class: 'check auto', text: 'Sinkronisasi berjalan sendiri: dist/ dibangun ulang otomatis dalam ±1 detik setelah simpan.' }),
-        el('div', { class: 'check', text: 'Push ke GitHub. GitHub Actions akan mendeploy otomatis ke rizlmaulanaa.github.io/portofolio/.' })
+        el('div', { class: 'check', text: 'Push ke GitHub. GitHub Actions akan mendeploy otomatis ke heyrm.my.id.' })
       )),
       H.card('Situs aktif', el('div', { class: 'grid-2' },
         A.input('site.name', 'Nama lengkap', { file: 'site' }),
