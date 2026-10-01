@@ -2,7 +2,7 @@ name: Deploy situs ke GitHub Pages
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -25,7 +25,7 @@ jobs:
           node-version: 22
 
       - name: Pasang dependensi
-        run: npm install
+        run: npm ci
 
       - name: Bangun situs
         run: npm run build
