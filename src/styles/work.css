@@ -1,0 +1,261 @@
+/* =====================================================================
+   Karya: kiri indeks riwayat pekerjaan, kanan slider proyek
+   ===================================================================== */
+
+.work-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.35fr);
+  gap: clamp(24px, 3vw, 44px);
+  align-items: stretch;
+}
+
+/* ---------------- kiri: daftar riwayat pekerjaan ---------------- */
+.work-list {
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: clamp(18px, 2vw, 26px);
+}
+
+.work-list-head {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 14px;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.work-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 4px;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.25s, padding 0.3s;
+}
+.work-item-idx {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--muted);
+  flex: 0 0 auto;
+  min-width: 1.6em;
+}
+.work-item-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+.work-item-year {
+  font-size: 0.76rem;
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+
+/* baris pekerjaan: perusahaan + jabatan, periode di kanan */
+.work-item-job { align-items: flex-start; padding: 16px 4px; }
+.work-item-job:hover { color: inherit; padding-left: 4px; }
+.work-item-body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.work-item-body .work-item-title { flex: 0 1 auto; }
+.work-item-role {
+  font-size: 0.81rem;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+.work-item-job .work-item-year {
+  text-align: right;
+  line-height: 1.4;
+  max-width: 11ch;
+}
+
+/* ---------------- kanan: slider proyek ---------------- */
+.proj {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.proj-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px clamp(16px, 2vw, 24px);
+  border-bottom: 1px solid var(--line);
+}
+.proj-label {
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.proj-controls { display: flex; gap: 8px; }
+.proj-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line-strong);
+  background: var(--panel);
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, color 0.25s, transform 0.25s;
+}
+.proj-btn:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+.proj-btn:active { transform: scale(0.94); }
+.proj-btn:disabled { opacity: 0.3; cursor: default; }
+.proj-btn:disabled:hover { background: var(--panel); border-color: var(--line-strong); color: var(--ink); }
+
+.proj-viewport {
+  overflow: hidden;
+  transition: height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.proj-track {
+  display: flex;
+  align-items: flex-start;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.proj-card {
+  flex: 0 0 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.proj-media {
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.proj-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.proj-card:hover .proj-media img { transform: scale(1.04); }
+
+.proj-body {
+  padding: clamp(18px, 2.2vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.proj-tag {
+  align-self: flex-start;
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: var(--bg);
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  padding: 5px 12px;
+  border-radius: var(--pill);
+}
+
+.proj-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  transition: color 0.25s;
+}
+.proj-card:hover .proj-title { color: var(--accent); }
+
+.proj-desc {
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+  max-width: 56ch;
+}
+
+.proj-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  align-items: center;
+  font-size: 0.77rem;
+  color: var(--muted);
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.proj-card-text .proj-body { justify-content: center; }
+.proj-card-text .proj-meta { margin-top: 4px; }
+
+/* tautan pelengkap menempel di dasar panel */
+.work-list-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.work-list-more svg { transition: transform 0.3s; }
+.work-list-more:hover { color: var(--accent); }
+.work-list-more:hover svg { transform: translate(3px, -3px); }
+
+.proj-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px clamp(16px, 2vw, 24px);
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+}
+.proj-dots { display: flex; gap: 7px; align-items: center; }
+.proj-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  background: var(--line-strong);
+  cursor: pointer;
+  transition: background 0.25s, width 0.3s;
+}
+.proj-dot.is-active { background: var(--accent); width: 20px; border-radius: var(--pill); }
+.proj-count {
+  font-size: 0.74rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 980px) {
+  .work-grid { grid-template-columns: minmax(0, 1fr); }
+  .work-list { order: 2; }
+  .proj { order: 1; }
+}

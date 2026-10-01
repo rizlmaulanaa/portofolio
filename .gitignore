@@ -1,0 +1,16 @@
+# dependensi & hasil build
+node_modules/
+dist/
+.astro/
+
+# cadangan panel admin
+.admin-backups/
+
+# editor & sistem
+.DS_Store
+*.log
+.env
+.env.*
+
+# pratinjau lokal
+.vite/

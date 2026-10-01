@@ -1,0 +1,593 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { asset } from '../utils/url';
+import {
+  site, labels, work, experience, albums, credentials, pending, education,
+  skills, awards, writing,
+} from '../utils/content';
+
+const list = (work || []).slice();
+const filters = [
+  { key: 'all', id: 'Semua', en: 'All' },
+  { key: 'certification', id: 'Sertifikasi', en: 'Certifications' },
+  { key: 'event', id: 'Acara', en: 'Events' },
+  { key: 'training', id: 'Pelatihan', en: 'Training' },
+  { key: 'work', id: 'Kegiatan', en: 'Work' },
+  { key: 'profile', id: 'Profil', en: 'Profile' },
+];
+---
+
+<Base>
+  <Nav />
+
+  <main id="main">
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <h1 class="hero-title reveal">
+          <span class="loc-id">{site.intro.id}</span>
+          <span class="loc-en">{site.intro.en}</span>
+          <img
+            class="hero-face"
+            src={asset('media/profil-2.jpg')}
+            alt={site.name}
+            width="180"
+            height="180"
+            fetchpriority="high"
+          />
+          <span class="hero-name">{site.name}!</span>
+        </h1>
+
+        <p class="hero-sub reveal">
+          <span class="loc-id">
+            Lima tahun <b>membangun, memperbaiki,</b> dan menguji sistem.
+          </span>
+          <span class="loc-en">
+            Five years <b>building, fixing,</b> and testing systems.
+          </span>
+        </p>
+
+        <p class="hero-lead reveal">
+          <span class="loc-id">{site.tagline.id}</span>
+          <span class="loc-en">{site.tagline.en}</span>
+        </p>
+
+        <div class="hero-actions reveal">
+          <a class="btn" href="#contact">
+            <span class="loc-id">Hubungi saya</span>
+            <span class="loc-en">Get in touch</span>
+          </a>
+          <a class="btn btn-ghost" href="#work">
+            <span class="loc-id">Lihat karya</span>
+            <span class="loc-en">See my work</span>
+          </a>
+        </div>
+
+        <div class="hero-status reveal">
+          <span class="ok"><i></i>
+            <span class="loc-id">{site.status.id}</span>
+            <span class="loc-en">{site.status.en}</span>
+          </span>
+          <span>{site.location.id}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KARYA ================= -->
+    <section class="section" id="work">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <h2 class="sec-title">
+            <span class="loc-id">Karya.</span>
+            <span class="loc-en">Work.</span>
+          </h2>
+          <div class="sec-head-side">
+            <p class="lead">
+              <span class="loc-id">{labels.work.sub.id}</span>
+              <span class="loc-en">{labels.work.sub.en}</span>
+            </p>
+            <a class="btn btn-sm" href={site.links.github} target="_blank" rel="noopener">
+              <span class="loc-id">Semua di GitHub</span>
+              <span class="loc-en">All on GitHub</span>
+            </a>
+          </div>
+        </header>
+
+        <div class="work-grid">
+          <!-- riwayat pekerjaan, bergaya indeks -->
+          <div class="work-list reveal">
+            <div class="work-list-head">
+              <span class="loc-id">Riwayat pekerjaan</span>
+              <span class="loc-en">Employment</span>
+            </div>
+            {experience.map((x: any, i: number) => (
+              <div class="work-item work-item-job">
+                <span class="work-item-idx">{String(i + 1).padStart(2, '0')}</span>
+                <span class="work-item-body">
+                  <span class="work-item-title">
+                    <span class="loc-id">{x.company?.id || x.company}</span>
+                    <span class="loc-en">{x.company?.en || x.company}</span>
+                  </span>
+                  <span class="work-item-role">
+                    <span class="loc-id">{x.role?.id}</span>
+                    <span class="loc-en">{x.role?.en}</span>
+                  </span>
+                </span>
+                <span class="work-item-year">
+                  <span class="loc-id">{x.period?.id}</span>
+                  <span class="loc-en">{x.period?.en}</span>
+                </span>
+              </div>
+            ))}
+            <a class="work-list-more" href={site.links.linkedin} target="_blank" rel="noopener">
+              <span class="loc-id">Riwayat lengkap di LinkedIn</span>
+              <span class="loc-en">Full history on LinkedIn</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+
+          <!-- slider proyek di sebelahnya -->
+          <div class="proj reveal" id="projSlider">
+            <div class="proj-head">
+              <span class="proj-label">
+                <span class="loc-id">Proyek pilihan</span>
+                <span class="loc-en">Selected projects</span>
+              </span>
+              <div class="proj-controls">
+                <button class="proj-btn" id="projPrev" type="button" aria-label="Sebelumnya">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="proj-btn" id="projNext" type="button" aria-label="Berikutnya">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="proj-viewport">
+              <div class="proj-track" id="projTrack">
+                {list.map((w: any, i: number) => (
+                  <a
+                    class:list={['proj-card', !w.image && 'proj-card-text']}
+                    href={w.url}
+                    target="_blank"
+                    rel="noopener"
+                    data-idx={i}
+                  >
+                    {w.image ? (
+                      <div class="proj-media">
+                        <img
+                          src={asset(`media/${w.image}`)}
+                          alt=""
+                          loading="lazy"
+                          decoding="async"
+                          width="1280"
+                          height="640"
+                        />
+                      </div>
+                    ) : null}
+                    <div class="proj-body">
+                      <span class="proj-tag">
+                        <span class="loc-id">{w.category?.id}</span>
+                        <span class="loc-en">{w.category?.en}</span>
+                      </span>
+                      <h3 class="proj-title">{w.title}</h3>
+                      <p class="proj-desc">
+                        <span class="loc-id">{w.desc?.id}</span>
+                        <span class="loc-en">{w.desc?.en}</span>
+                      </p>
+                      <div class="proj-meta">
+                        <span>{w.year}</span>
+                        {w.stack?.length ? <span>{w.stack.slice(0, 4).join(' · ')}</span> : null}
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div class="proj-foot">
+              <div class="proj-dots" id="projDots"></div>
+              <span class="proj-count" id="projCount"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TENTANG ================= -->
+    <section class="section section-tint" id="about">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <h2 class="sec-title">
+            <span class="loc-id">Tentang.</span>
+            <span class="loc-en">About.</span>
+          </h2>
+          <div class="sec-head-side">
+            <p class="lead">
+              <span class="loc-id">{labels.about.sub.id}</span>
+              <span class="loc-en">{labels.about.sub.en}</span>
+            </p>
+          </div>
+        </header>
+
+        <div class="about-grid">
+          <div class="reveal">
+            <p class="about-statement">
+              <span class="loc-id">Teknisi IT yang pindah ke <em>keamanan siber</em>, dan sekarang mencari celah sebelum orang lain menemukannya.</span>
+              <span class="loc-en">An IT technician who moved into <em>cybersecurity</em>, now hunting flaws before anyone else finds them.</span>
+            </p>
+            {(site.summary?.id || []).map((p: string, i: number) => (
+              <p class="about-p">
+                <span class="loc-id">{site.summary.id[i]}</span>
+                <span class="loc-en">{site.summary.en[i]}</span>
+              </p>
+            ))}
+          </div>
+
+          <dl class="facts reveal">
+            <dt class="facts-title">
+              <span class="loc-id">Data ringkas</span>
+              <span class="loc-en">Quick facts</span>
+            </dt>
+            {(site.facts || []).map((f: any) => (
+              <div class="fact">
+                <dt><span class="loc-id">{f.label.id}</span><span class="loc-en">{f.label.en}</span></dt>
+                <dd><span class="loc-id">{f.value.id}</span><span class="loc-en">{f.value.en}</span></dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+
+        <div class="skill-slider reveal" id="skillSlider">
+          <div class="skill-slider-head">
+            <span class="skill-slider-label">
+              <span class="loc-id">Kemampuan</span>
+              <span class="loc-en">Skills</span>
+            </span>
+            <div class="proj-controls">
+              <button class="proj-btn" id="skillPrev" type="button" aria-label="Sebelumnya">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button class="proj-btn" id="skillNext" type="button" aria-label="Berikutnya">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="skill-viewport">
+            <div class="skill-track" id="skillTrack">
+              {(skills || []).map((s: any) => (
+                <article class="skill-card">
+                  <h3><span class="loc-id">{s.title.id}</span><span class="loc-en">{s.title.en}</span></h3>
+                  <p><span class="loc-id">{s.blurb.id}</span><span class="loc-en">{s.blurb.en}</span></p>
+                  <ul class="skill-list">
+                    {(s.items?.id || []).map((it: string, j: number) => (
+                      <li>
+                        <span class="loc-id">{s.items.id[j]}</span>
+                        <span class="loc-en">{s.items.en[j]}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div class="skill-slider-foot">
+            <div class="proj-dots" id="skillDots"></div>
+            <span class="proj-count" id="skillCount"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERI ================= -->
+    <section class="section" id="albums">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <h2 class="sec-title">
+            <span class="loc-id">Galeri.</span>
+            <span class="loc-en">Gallery.</span>
+          </h2>
+          <div class="sec-head-side">
+            <p class="lead">
+              <span class="loc-id">{labels.albums.sub.id}</span>
+              <span class="loc-en">{labels.albums.sub.en}</span>
+            </p>
+          </div>
+        </header>
+
+        <div class="filters reveal" role="tablist">
+          {filters.map((f, i) => (
+            <button
+              class:list={['filter', i === 0 && 'is-active']}
+              type="button"
+              data-filter={f.key}
+              role="tab"
+              aria-selected={i === 0 ? 'true' : 'false'}
+            >
+              <span class="loc-id">{f.id}</span>
+              <span class="loc-en">{f.en}</span>
+            </button>
+          ))}
+        </div>
+
+        <div class="album-grid">
+          {(albums || []).map((a: any) => (
+            <button class="album reveal" type="button" data-album={a.id} data-kind={a.kind}>
+              <div class="album-media">
+                <img
+                  src={asset(`media/${a.photos?.[0]?.src || ''}`)}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span class="album-count">
+                  {a.photos?.length || 0}
+                  <span class="loc-id"> foto</span>
+                  <span class="loc-en"> photos</span>
+                </span>
+              </div>
+              <div class="album-body">
+                <h3 class="album-title">
+                  <span class="loc-id">{a.title.id}</span>
+                  <span class="loc-en">{a.title.en}</span>
+                </h3>
+                <span class="album-date">
+                  <span class="loc-id">{a.date.id}</span>
+                  <span class="loc-en">{a.date.en}</span>
+                </span>
+                <p class="album-desc">
+                  <span class="loc-id">{a.desc.id}</span>
+                  <span class="loc-en">{a.desc.en}</span>
+                </p>
+                <span class="album-open">
+                  <span class="loc-id">Buka album</span>
+                  <span class="loc-en">Open album</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+                </span>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KREDENSIAL ================= -->
+    <section class="section section-tint" id="credentials">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <h2 class="sec-title">
+            <span class="loc-id">Kredensial.</span>
+            <span class="loc-en">Credentials.</span>
+          </h2>
+          <div class="sec-head-side">
+            <p class="lead">
+              <span class="loc-id">{labels.credentials.sub.id}</span>
+              <span class="loc-en">{labels.credentials.sub.en}</span>
+            </p>
+          </div>
+        </header>
+
+        <div class="cred-grid">
+          <div class="reveal">
+            <div class="cred-col-title">
+              <span class="loc-id">Pendidikan</span>
+              <span class="loc-en">Education</span>
+            </div>
+            {(education || []).map((e: any) => (
+              <div class="cred">
+                <div class="cred-main">
+                  <div class="cred-name"><span class="loc-id">{e.degree.id}</span><span class="loc-en">{e.degree.en}</span></div>
+                  <div class="cred-org">{e.institution}</div>
+                </div>
+                <div class="cred-side">
+                  <div><span class="loc-id">{e.period.id}</span><span class="loc-en">{e.period.en}</span></div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div class="reveal">
+            <div class="cred-col-title">
+              <span class="loc-id">Sertifikasi profesional</span>
+              <span class="loc-en">Certifications</span>
+              <span class="cred-count">{(credentials || []).length}</span>
+            </div>
+            <div class="cred-scroll">
+              {(credentials || []).map((c: any) => (
+                <div class="cred">
+                  <div class="cred-main">
+                    <div class="cred-name">{c.name}</div>
+                    <div class="cred-org">{c.issuer}</div>
+                  </div>
+                  <div class="cred-side">
+                    <div><span class="loc-id">{c.date?.id}</span><span class="loc-en">{c.date?.en}</span></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {(pending || []).length > 0 && (
+              <div style="margin-top:26px">
+                <div class="cred-col-title">
+                  <span class="loc-id">Menunggu tanggal</span>
+                  <span class="loc-en">Pending dates</span>
+                </div>
+                {(pending || []).map((p: any) => (
+                  <div class="cred">
+                    <div class="cred-main">
+                      <div class="cred-name">{p.name}</div>
+                      <div class="cred-org">{p.issuer}</div>
+                    </div>
+                    <div class="cred-side">
+                      <span class="badge badge-wait">
+                        <span class="loc-id">Menunggu</span>
+                        <span class="loc-en">Pending</span>
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {(awards || []).length > 0 && (
+          <div>
+            <div class="sec-head reveal" style="margin-top:clamp(44px,6vw,72px);margin-bottom:0">
+              <h3 class="sec-title" style="font-size:clamp(2rem,5vw,3.4rem)">
+                <span class="loc-id">{labels.awards.title.id}</span>
+                <span class="loc-en">{labels.awards.title.en}</span>
+              </h3>
+            </div>
+            <div class="award-grid">
+              {(awards || []).map((a: any) => (
+                <article class="award reveal">
+                  <span class="award-org">{a.org}</span>
+                  <h3><span class="loc-id">{a.title.id}</span><span class="loc-en">{a.title.en}</span></h3>
+                  <p><span class="loc-id">{a.summary.id}</span><span class="loc-en">{a.summary.en}</span></p>
+                  <div class="award-foot">
+                    <span class="badge badge-ok">
+                      <span class="loc-id">Divalidasi</span>
+                      <span class="loc-en">Verified</span>
+                    </span>
+                    <span><span class="loc-id">{a.date.id}</span><span class="loc-en">{a.date.en}</span></span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+
+    <!-- ================= TULISAN ================= -->
+    <section class="section" id="writing">
+      <div class="wrap">
+        <header class="sec-head reveal">
+          <h2 class="sec-title">
+            <span class="loc-id">Tulisan.</span>
+            <span class="loc-en">Writing.</span>
+          </h2>
+          <div class="sec-head-side">
+            <p class="lead">
+              <span class="loc-id">{labels.writing.sub.id}</span>
+              <span class="loc-en">{labels.writing.sub.en}</span>
+            </p>
+            <a class="btn btn-sm btn-ghost" href={site.links.medium} target="_blank" rel="noopener">
+              <span class="loc-id">Buka Medium</span>
+              <span class="loc-en">Open Medium</span>
+            </a>
+          </div>
+        </header>
+
+        <div class="post-grid">
+          {(writing || []).map((w: any, i: number) => (
+            <a class="post reveal" href={w.url} target="_blank" rel="noopener">
+              <div class="post-cover">
+                <img
+                  src={asset(`media/${w.image || `art-write-${(i % 7) + 1}.jpg`}`)}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="post-body">
+                <h3 class="post-title">
+                  <span class="loc-id">{w.title.id}</span>
+                  <span class="loc-en">{w.title.en}</span>
+                </h3>
+                <p class="post-meta">
+                  <b><span class="loc-id">{w.category.id}</span><span class="loc-en">{w.category.en}</span></b>
+                  <span>·</span>
+                  <span><span class="loc-id">{w.date.id}</span><span class="loc-en">{w.date.en}</span></span>
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= KONTAK ================= -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <p class="eyebrow reveal">
+          <span class="loc-id">{labels.contact.kicker.id}</span>
+          <span class="loc-en">{labels.contact.kicker.en}</span>
+        </p>
+        <h2 class="sec-title reveal" style="margin-top:16px">
+          <span class="loc-id">{labels.contact.title.id}</span>
+          <span class="loc-en">{labels.contact.title.en}</span>
+        </h2>
+        <p class="contact-lead reveal">
+          <span class="loc-id">{labels.contact.sub.id}</span>
+          <span class="loc-en">{labels.contact.sub.en}</span>
+        </p>
+
+        <div class="contact-actions reveal">
+          <a class="btn" href={`mailto:${site.email}`}>
+            <span class="loc-id">Kirim email</span>
+            <span class="loc-en">Send email</span>
+          </a>
+          <a class="btn btn-ghost" href={site.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-ghost" href={site.links.github} target="_blank" rel="noopener">GitHub</a>
+          <button class="btn btn-ghost" id="copyMail" type="button" data-mail={site.email}>
+            <span class="loc-id">Salin alamat</span>
+            <span class="loc-en">Copy address</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PANEL DETAL ALBUM ================= -->
+    <div class="panel" id="albumPanel" role="dialog" aria-modal="true" aria-label="Detail album">
+      <div class="panel-inner">
+        <div class="panel-top">
+          <div>
+            <p class="eyebrow" id="panelKind"></p>
+            <h2 class="h-lg" id="panelTitle" style="margin-top:8px"></h2>
+            <p class="lead" id="panelDate" style="margin-top:10px"></p>
+            <p class="lead" id="panelDesc" style="margin-top:8px;max-width:60ch"></p>
+          </div>
+          <button class="panel-close" id="panelClose" type="button" aria-label="Tutup">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="panel-photos" id="panelPhotos"></div>
+      </div>
+    </div>
+
+    <!-- ================= LIGHTBOX ================= -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto">
+      <img id="lbImg" alt="" />
+      <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Sebelumnya">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Berikutnya">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
+      <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Tutup">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <p class="lb-cap" id="lbCap"></p>
+    </div>
+
+    <!-- data album untuk panel detail (dibaca app.js) -->
+    <script type="application/json" id="albumData" set:html={JSON.stringify(
+      (albums || []).map((a: any) => ({
+        id: a.id,
+        kind: a.kind,
+        title: a.title,
+        date: a.date,
+        desc: a.desc,
+        photos: (a.photos || []).map((p: any) => ({ src: asset(`media/${p.src}`), caption: p.caption || p.alt })),
+      }))
+    )} />
+  </main>
+
+  <Footer />
+</Base>

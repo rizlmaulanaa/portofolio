@@ -1,0 +1,61 @@
+---
+import '../styles/base.css';
+import '../styles/layout.css';
+import '../styles/work.css';
+import '../styles/sections.css';
+import { asset } from '../utils/url';
+import { site, labels } from '../utils/content';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+
+const siteTitle = title
+  ? `${title} - ${site.name}`
+  : `${site.name} - Spesialis Keamanan Siber`;
+const desc = description || site.tagline?.id || '';
+---
+
+<!doctype html>
+<html lang="id" class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{siteTitle}</title>
+    <meta name="description" content={desc} />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="icon" type="image/svg+xml" href={asset('favicon.svg')} />
+    <link rel="stylesheet" href={asset('fonts/fonts.css')} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={desc} />
+
+    <!-- terapkan bahasa SEBELUM gambar pertama, supaya tidak berkedip -->
+    <script is:inline>
+      (function () {
+        try {
+          var l = localStorage.getItem('rm-lang');
+          document.documentElement.classList.remove('no-js');
+          if (l === 'en') document.documentElement.lang = 'en';
+        } catch (e) {
+          document.documentElement.classList.remove('no-js');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">
+      <span class="loc-id">Lewati ke konten</span>
+      <span class="loc-en">Skip to content</span>
+    </a>
+
+    <slot />
+
+    <script src={asset('app.js')} defer></script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+[
+  {
+    "title": {
+      "id": "[Review] Ujian WEB-RTA: Menguasai Attack Chain Multi-Aplikasi",
+      "en": "[Review] WEB-RTA Exam: Mastering the Multi-App Attack Chain"
+    },
+    "url": "https://systemweakness.com/review-web-rta-exam-mastering-the-multi-app-attack-chain-b19879f6df70",
+    "date": {
+      "id": "Januari 2026",
+      "en": "January 2026"
+    },
+    "sort": "2026-01",
+    "category": {
+      "id": "Review",
+      "en": "Review"
+    },
+    "blurb": {
+      "id": "Merangkai celah JWT, SQLi, XXE, dan OAuth untuk menguasai seluruh server ujian, hanya dengan Burp Suite.",
+      "en": "Chaining JWT misconfigurations, SQLi, XXE, and OAuth to take over the entire exam server, using only Burp Suite."
+    },
+    "image": "write-1.jpg"
+  },
+  {
+    "title": {
+      "id": "5 Langkah Mudah Mendeteksi Email Palsu",
+      "en": "5 Easy Ways to Spot a Phishing Email"
+    },
+    "url": "https://medium.com/system-weakness/5-easy-ways-to-spot-a-phishing-email-even-if-youre-not-a-cybersecurity-expert-%EF%B8%8F-248c2eae604f",
+    "date": {
+      "id": "Mei 2025",
+      "en": "May 2025"
+    },
+    "sort": "2025-05",
+    "category": {
+      "id": "Kesadaran",
+      "en": "Awareness"
+    },
+    "blurb": {
+      "id": "Panduan praktis untuk siapa saja: membedakan email kerja asli dari jebakan rekayasa sosial.",
+      "en": "A practical guide for anyone: telling real work emails apart from social engineering traps."
+    },
+    "image": "write-2.jpg"
+  },
+  {
+    "title": {
+      "id": "Analisis Forensik Lampiran Email (Blue Team Labs)",
+      "en": "Phishing Analysis Writeup (Blue Team Labs)"
+    },
+    "url": "https://medium.com/@heyrm/blue-team-labs-online-phishing-analysis-writeup-69df49e132c1",
+    "date": {
+      "id": "Agustus 2024",
+      "en": "August 2024"
+    },
+    "sort": "2024-08",
+    "category": {
+      "id": "Writeup",
+      "en": "Writeup"
+    },
+    "blurb": {
+      "id": "Mengupas lampiran berbahaya dan melacak pengirim lewat header email.",
+      "en": "Dissecting a malicious attachment and tracing the sender through email headers."
+    },
+    "image": "write-3.jpg"
+  },
+  {
+    "title": {
+      "id": "Menemukan & Mengeksploitasi Kerentanan XSS: Reward Pertamaku",
+      "en": "Discovering and Exploiting XSS: My First Reward"
+    },
+    "url": "https://medium.com/@heyrm/writeup-discovering-and-exploiting-xss-vulnerabilities-my-first-bug-hunting-reward-0dfb0ebfd6aa",
+    "date": {
+      "id": "Juni 2024",
+      "en": "June 2024"
+    },
+    "sort": "2024-06",
+    "category": {
+      "id": "Writeup",
+      "en": "Writeup"
+    },
+    "blurb": {
+      "id": "Dokumentasi taktis saat mengaudit parameter input tidak tervalidasi hingga menemukan celah XSS.",
+      "en": "A tactical breakdown of auditing unvalidated input parameters that led to an XSS finding."
+    },
+    "image": "write-4.jpg"
+  },
+  {
+    "title": {
+      "id": "Latihan Pertahanan Siber dengan CTF Blue Team: Bagian 1",
+      "en": "Cyber Defense with Blue Team CTF: Part 1"
+    },
+    "url": "https://medium.com/@heyrm/exploring-cyber-defense-with-blue-team-ctf-challenges-part-1-4c1c3fba9409",
+    "date": {
+      "id": "Mei 2024",
+      "en": "May 2024"
+    },
+    "sort": "2024-05",
+    "category": {
+      "id": "Blue Team",
+      "en": "Blue Team"
+    },
+    "blurb": {
+      "id": "Latihan bertahan lewat tantangan CTF, dari analisis jaringan sampai triase insiden.",
+      "en": "Defense practice through CTF challenges, from network analysis to incident triage."
+    },
+    "image": "write-5.jpg"
+  },
+  {
+    "title": {
+      "id": "Usage Machine: HackTheBox Writeup",
+      "en": "Usage Machine: HackTheBox Writeup"
+    },
+    "url": "https://medium.com/@heyrm/usage-machine-hackthebox-writeup-journey-through-exploitation-16397895490f",
+    "date": {
+      "id": "Mei 2024",
+      "en": "May 2024"
+    },
+    "sort": "2024-05b",
+    "category": {
+      "id": "Writeup",
+      "en": "Writeup"
+    },
+    "blurb": {
+      "id": "Mesin HTB pertama yang saya selesaikan, dari enumerasi sampai eskalasi hak akses.",
+      "en": "The first HTB machine I finished, from enumeration to privilege escalation."
+    },
+    "image": "write-6.jpg"
+  },
+  {
+    "title": {
+      "id": "Cara Terhubung ke Target Machine HackTheBox",
+      "en": "How to Connect to HackTheBox Target Machines"
+    },
+    "url": "https://medium.com/@heyrm/hack-the-box-how-to-connect-to-target-machines-cebd83fb7f2a",
+    "date": {
+      "id": "April 2024",
+      "en": "April 2024"
+    },
+    "sort": "2024-04",
+    "category": {
+      "id": "Tutorial",
+      "en": "Tutorial"
+    },
+    "blurb": {
+      "id": "Panduan setup VPN dan koneksi awal sebelum mengerjakan lab.",
+      "en": "A VPN setup and first-connection guide before tackling the labs."
+    },
+    "image": "write-7.jpg"
+  }
+]

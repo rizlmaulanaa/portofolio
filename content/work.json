@@ -1,0 +1,204 @@
+[
+  {
+    "id": "redis-uaf",
+    "title": "CVE-2026-23479: Redis UAF PoC",
+    "category": {
+      "id": "Riset Kerentanan",
+      "en": "Vulnerability Research"
+    },
+    "year": "2026",
+    "url": "https://github.com/rizlmaulanaa/CVE-2026-23479-Redis-UAF-Proof-of-Concept",
+    "desc": {
+      "id": "Use-After-Free di fungsi unblockClientOnKey() Redis yang berujung ke eksekusi kode jarak jauh. PoC lengkap dengan penelusuran memori memakai GDB.",
+      "en": "A use-after-free in Redis's unblockClientOnKey() leading to remote code execution. Full PoC with memory-level tracing via GDB."
+    },
+    "role": {
+      "id": "Riset mandiri",
+      "en": "Independent research"
+    },
+    "stack": [
+      "C",
+      "GDB",
+      "Docker",
+      "Redis"
+    ],
+    "points": {
+      "id": [
+        "Menganalisis akar penyebab dan menyusun jalur reproduksi yang bisa diulang",
+        "Memetakan primitive eksploitasi lewat GDB",
+        "Dibuat untuk lab & edukasi"
+      ],
+      "en": [
+        "Analyzed root cause and built a repeatable reproduction path",
+        "Mapped exploitation primitives through GDB",
+        "Built for lab & education only"
+      ]
+    },
+    "image": null
+  },
+  {
+    "id": "phishing-workshop",
+    "title": "Phishing Simulation Workshop",
+    "category": {
+      "id": "Materi Pelatihan",
+      "en": "Training Material"
+    },
+    "year": "2026",
+    "url": "https://github.com/rizlmaulanaa/phishing-workshop-materials",
+    "desc": {
+      "id": "Perangkat workshop kesadaran keamanan: slide interaktif dan modul lengkap untuk melatih karyawan mengenali phishing.",
+      "en": "A security awareness workshop kit: interactive slides and a complete module to train staff in spotting phishing."
+    },
+    "role": {
+      "id": "Penyusun materi",
+      "en": "Author"
+    },
+    "stack": [
+      "Python",
+      "Security Awareness"
+    ],
+    "points": {
+      "id": [
+        "Membedah anatomi serangan phishing langkah demi langkah",
+        "Dirancang untuk audiens non-teknis",
+        "Sejalan dengan sertifikasi CPPS & CCSC"
+      ],
+      "en": [
+        "Dissects the anatomy of a phishing attack step by step",
+        "Built for non-technical audiences",
+        "Aligned with my CPPS & CCSC certifications"
+      ]
+    },
+    "image": null
+  },
+  {
+    "id": "cloudsafe",
+    "title": "CloudSafe",
+    "category": {
+      "id": "Aplikasi Edukasi",
+      "en": "Educational App"
+    },
+    "year": "2026",
+    "url": "https://github.com/rizlmaulanaa/cloudsafe",
+    "desc": {
+      "id": "Aplikasi web yang menjelaskan keamanan data di penyimpanan awan kepada orang awam lewat alur cerita dan simulasi.",
+      "en": "A web app that explains cloud storage data security to laypeople through storytelling and simulation."
+    },
+    "role": {
+      "id": "Pengembang",
+      "en": "Developer"
+    },
+    "stack": [
+      "TypeScript",
+      "Web"
+    ],
+    "points": {
+      "id": [
+        "Menjelaskan enkripsi dan proteksi kredensial tanpa jargon",
+        "Proyek mata kuliah ICT Literacy"
+      ],
+      "en": [
+        "Explains encryption and credential protection without jargon",
+        "Project for the ICT Literacy course"
+      ]
+    },
+    "image": null
+  },
+  {
+    "id": "visidata",
+    "title": "Redesain Website Visidata",
+    "category": {
+      "id": "Redesain Web",
+      "en": "Web Redesign"
+    },
+    "year": "2026",
+    "url": "https://github.com/rizlmaulanaa/visidata",
+    "desc": {
+      "id": "Perombakan antarmuka situs perusahaan retail IT tempat saya bekerja hampir lima tahun, termasuk panduan pengelolaan aset gambar.",
+      "en": "Interface overhaul for the IT retail company I worked at for nearly five years, including an image asset management guide."
+    },
+    "role": {
+      "id": "Perancang & pengembang",
+      "en": "Designer & developer"
+    },
+    "stack": [
+      "CSS",
+      "UI"
+    ],
+    "points": {
+      "id": [
+        "Menata ulang tata letak dan sistem visual",
+        "Membuat struktur folder aset agar mudah dikelola tim"
+      ],
+      "en": [
+        "Reworked the layout and visual system",
+        "Built an asset folder structure the team can maintain"
+      ]
+    },
+    "image": "visidata-hero.jpg"
+  },
+  {
+    "id": "zalact",
+    "title": "ZaLAct",
+    "category": {
+      "id": "Otomasi",
+      "en": "Automation"
+    },
+    "year": "2025",
+    "url": "https://github.com/rizlmaulanaa/zalact",
+    "desc": {
+      "id": "Skrip PowerShell untuk mempercepat aktivasi dan penyiapan sistem yang berulang.",
+      "en": "A PowerShell script that speeds up repetitive activation and system setup."
+    },
+    "role": {
+      "id": "Penulis skrip",
+      "en": "Script author"
+    },
+    "stack": [
+      "PowerShell",
+      "Windows"
+    ],
+    "points": {
+      "id": [
+        "Memangkas langkah manual saat menyiapkan perangkat baru"
+      ],
+      "en": [
+        "Cuts manual steps when preparing new devices"
+      ]
+    },
+    "image": null
+  },
+  {
+    "id": "glosarium",
+    "title": "GlosariumApp & Glossa",
+    "category": {
+      "id": "Aplikasi Desktop",
+      "en": "Desktop App"
+    },
+    "year": "2025-2026",
+    "url": "https://github.com/rizlmaulanaa/GlosariumApp",
+    "desc": {
+      "id": "Dua aplikasi Windows Forms untuk mengelola glosarium istilah pemrograman, dengan mode kuis acak, log aktivitas, dan statistik belajar.",
+      "en": "Two Windows Forms apps for managing programming term glossaries, with randomized quiz mode, activity logs, and learning statistics."
+    },
+    "role": {
+      "id": "Pengembang",
+      "en": "Developer"
+    },
+    "stack": [
+      "C#",
+      "WinForms"
+    ],
+    "points": {
+      "id": [
+        "Arsitektur berlapis: Models, Data, dan Forms terpisah",
+        "CRUD istilah, sistem cetak, dan kuis acak"
+      ],
+      "en": [
+        "Layered architecture: separated Models, Data, and Forms",
+        "Term CRUD, print system, and randomized quizzes"
+      ]
+    },
+    "image": null
+  }
+]

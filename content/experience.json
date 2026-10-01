@@ -1,0 +1,72 @@
+[
+  {
+    "id": "visidata",
+    "period": {
+      "id": "Agustus 2021 - Juni 2026",
+      "en": "August 2021 - June 2026"
+    },
+    "role": {
+      "id": "Teknisi Komputer & Administrator Toko Online",
+      "en": "Computer Technician & Online Store Administrator"
+    },
+    "company": "PT Visidata Inti Teknologi",
+    "note": {
+      "id": "Lenovo Exclusive Store Balikpapan",
+      "en": "Lenovo Exclusive Store Balikpapan"
+    },
+    "location": {
+      "id": "Balikpapan, Kalimantan Timur",
+      "en": "Balikpapan, East Kalimantan"
+    },
+    "current": false,
+    "points": {
+      "id": [
+        "Merakit dan menguji 10-15 unit PC kustom kelas menengah-atas setiap bulan, menekan rasio retur hingga ±20%",
+        "Menangani diagnosa crash kritis, pemulihan data sektor terhapus, dan pencitraan disk tanpa kehilangan data pelanggan",
+        "Mengelola 200+ SKU aktif di Tokopedia & Shopee, dari penyusunan materi produk sampai optimasi kata kunci pencarian",
+        "Menjaga akurasi stok fisik terhadap etalase online di atas 98% lewat audit inventaris mingguan",
+        "Mengedukasi 50+ pelanggan mengenai optimalisasi performa dan pencegahan infeksi malware dasar"
+      ],
+      "en": [
+        "Assembled and stability-tested 10-15 mid-to-high-end custom PCs monthly, cutting returns by ~20%",
+        "Handled critical crash diagnostics, deleted-sector recovery, and disk imaging with zero customer data loss",
+        "Managed 200+ active SKUs on Tokopedia & Shopee, from product copywriting to search keyword optimization",
+        "Kept physical-to-online stock accuracy above 98% through weekly inventory audits",
+        "Educated 50+ customers on performance optimization and basic malware prevention"
+      ]
+    }
+  },
+  {
+    "id": "pkl",
+    "period": {
+      "id": "2019-2020",
+      "en": "2019-2020"
+    },
+    "role": {
+      "id": "Praktik Kerja Lapangan: Komputer & Jaringan",
+      "en": "Field Internship: Computer & Networking"
+    },
+    "company": {
+      "id": "Tiga instansi",
+      "en": "Three placements"
+    },
+    "note": null,
+    "location": {
+      "id": "Cimahi & Balikpapan",
+      "en": "Cimahi & Balikpapan"
+    },
+    "current": false,
+    "points": {
+      "id": [
+        "BBPPMPV BMTI Kemdikbud RI (Jan-Feb 2020): instalasi jaringan lokal, analisis arsitektur switch, pemetaan konfigurasi server",
+        "PT Hexindo Adiperkasa Tbk (Okt-Des 2019): pemeliharaan hardware korporat, penanganan printer, penyusunan database inventaris",
+        "POLDA Kalimantan Timur (Jan-Apr 2019): penunjang data divisi IT dan audit stabilitas komputer layanan publik"
+      ],
+      "en": [
+        "BBPPMPV BMTI, Ministry of Education (Jan-Feb 2020): local network installation, switch architecture analysis, server configuration mapping",
+        "PT Hexindo Adiperkasa Tbk (Oct-Dec 2019): corporate hardware maintenance, printer troubleshooting, inventory database work",
+        "East Kalimantan Regional Police (Jan-Apr 2019): IT division data support and public service computer stability audits"
+      ]
+    }
+  }
+]

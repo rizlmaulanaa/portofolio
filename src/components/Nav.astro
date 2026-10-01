@@ -1,0 +1,48 @@
+---
+import { site, labels } from '../utils/content';
+
+const items = (site.nav || []).map((n: any) => ({
+  href: n.href,
+  key: n.key,
+  /* labels.json adalah sumber utama teks menu (dapat diedit di panel admin);
+     site.labels hanya cadangan bila labels.nav belum tersedia. */
+  label: labels.nav?.[n.key] || site.labels?.[n.key] || n.key,
+}));
+---
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label={site.name}>
+      <span class="brand-mark" aria-hidden="true">heyrm<i class="brand-dot"></i></span>
+    </a>
+
+    <div class="nav-right">
+      <button class="lang-btn" id="langBtn" type="button" aria-label="Ganti bahasa">ID</button>
+      <button class="burger" id="menuOpen" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menuOverlay">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- layar tutup menu -->
+<div class="overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Menu">
+  <nav class="overlay-nav">
+    {items.map((it: any, i: number) => (
+      <a class="overlay-link" href={it.href}>
+        <i>{String(i + 1).padStart(2, '0')}</i>
+        <span>
+          <span class="loc-id">{it.label.id}</span>
+          <span class="loc-en">{it.label.en}</span>
+        </span>
+      </a>
+    ))}
+  </nav>
+
+  <div class="overlay-foot">
+    <a href={site.links.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+    <a href={site.links.github} target="_blank" rel="noopener">GitHub</a>
+    <a href={site.links.medium} target="_blank" rel="noopener">Medium</a>
+    <span>{site.location.id}</span>
+  </div>
+</div>

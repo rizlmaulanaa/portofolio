@@ -1,0 +1,110 @@
+[
+  {
+    "id": "offensive",
+    "title": {
+      "id": "Offensive Security",
+      "en": "Offensive Security"
+    },
+    "blurb": {
+      "id": "Menguji aplikasi web seperti penyerang, manual, bukan sekadar menjalankan scanner.",
+      "en": "Testing web applications the way an attacker would, manual, not just running a scanner."
+    },
+    "items": {
+      "id": [
+        "Pengujian penetrasi aplikasi web (VAPT)",
+        "OWASP Top 10: SQLi, XSS, SSRF, IDOR, XXE",
+        "Burp Suite: intersepsi paket, repeater, intruder",
+        "Manipulasi JWT & penyalahgunaan scope OAuth",
+        "Perangkaian celah (attack chaining)",
+        "OSINT & pemetaan permukaan serangan"
+      ],
+      "en": [
+        "Web application penetration testing (VAPT)",
+        "OWASP Top 10: SQLi, XSS, SSRF, IDOR, XXE",
+        "Burp Suite: packet interception, repeater, intruder",
+        "JWT manipulation & OAuth scope abuse",
+        "Attack chaining",
+        "OSINT & attack surface mapping"
+      ]
+    }
+  },
+  {
+    "id": "defensive",
+    "title": {
+      "id": "Blue Team & Forensik",
+      "en": "Blue Team & Forensics"
+    },
+    "blurb": {
+      "id": "Sisi bertahan: membaca jejak, menganalisis insiden, dan menjelaskannya ke orang non-teknis.",
+      "en": "The defensive side: reading traces, analyzing incidents, and explaining them to non-technical people."
+    },
+    "items": {
+      "id": [
+        "Analisis phishing: header email, reverse DNS, lampiran berbahaya",
+        "Investigasi insiden & triase awal",
+        "Analisis jaringan dengan Wireshark",
+        "HackTheBox & Blue Team Labs",
+        "Penulisan laporan kerentanan yang bisa ditindaklanjuti"
+      ],
+      "en": [
+        "Phishing analysis: email headers, reverse DNS, malicious attachments",
+        "Incident investigation & initial triage",
+        "Network analysis with Wireshark",
+        "HackTheBox & Blue Team Labs",
+        "Writing actionable vulnerability reports"
+      ]
+    }
+  },
+  {
+    "id": "infrastructure",
+    "title": {
+      "id": "Infrastruktur & Hardware",
+      "en": "Infrastructure & Hardware"
+    },
+    "blurb": {
+      "id": "Fondasi dari lima tahun kerja langsung di lapangan.",
+      "en": "The foundation from five years of hands-on work."
+    },
+    "items": {
+      "id": [
+        "Perakitan PC kustom & workstation",
+        "Diagnosa kerusakan hardware dan pemulihan data",
+        "Deployment Windows & pencitraan disk",
+        "Administrasi Linux dan scripting Bash",
+        "Dasar jaringan & MikroTik (MTCNA)"
+      ],
+      "en": [
+        "Custom PC & workstation assembly",
+        "Hardware fault diagnosis and data recovery",
+        "Windows deployment & disk imaging",
+        "Linux administration and Bash scripting",
+        "Networking fundamentals & MikroTik (MTCNA)"
+      ]
+    }
+  },
+  {
+    "id": "operations",
+    "title": {
+      "id": "Operasional Digital",
+      "en": "Digital Operations"
+    },
+    "blurb": {
+      "id": "Pengelolaan etalase ritel resmi untuk merek global.",
+      "en": "Running an official retail storefront for a global brand."
+    },
+    "items": {
+      "id": [
+        "Tokopedia & Shopee Seller Center",
+        "Optimasi produk untuk pencarian organik (SEO)",
+        "Audit stok & akurasi inventaris",
+        "Koordinasi kampanye musiman"
+      ],
+      "en": [
+        "Tokopedia & Shopee Seller Center",
+        "Product optimization for organic search (SEO)",
+        "Stock audits & inventory accuracy",
+        "Seasonal campaign coordination"
+      ]
+    }
+  }
+]

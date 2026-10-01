@@ -1,0 +1,193 @@
+{
+  "name": "Rizal Maulana",
+  "initials": "RM",
+  "handle": "rizlmaulanaa",
+  "email": "rizal144maulana@gmail.com",
+  "location": {
+    "id": "Balikpapan, Kalimantan Timur",
+    "en": "Balikpapan, East Kalimantan"
+  },
+  "locationShort": {
+    "id": "Balikpapan, ID",
+    "en": "Balikpapan, ID"
+  },
+  "status": {
+    "id": "Terbuka untuk peluang",
+    "en": "Open to work"
+  },
+  "roleWords": {
+    "id": [
+      "IT Support",
+      "Cybersecurity",
+      "Network Security",
+      "Hardware"
+    ],
+    "en": [
+      "IT Support",
+      "Cybersecurity",
+      "Network Security",
+      "Hardware"
+    ]
+  },
+  "intro": {
+    "id": "Halo, saya",
+    "en": "Hey, I'm"
+  },
+  "headline": {
+    "id": "lima tahun membangun, memperbaiki, dan menguji sistem",
+    "en": "five years building, fixing, and testing systems"
+  },
+  "tagline": {
+    "id": "Teknisi IT yang pindah haluan ke keamanan siber. Sekarang saya mencari celah di aplikasi web, dan sebelumnya saya yang memastikan perangkat keras tidak pernah gagal.",
+    "en": "An IT technician who moved into cybersecurity. These days I hunt vulnerabilities in web applications, before that I was the one making sure hardware never failed."
+  },
+  "links": {
+    "linkedin": "https://linkedin.com/in/rizlmaulanaa",
+    "github": "https://github.com/rizlmaulanaa",
+    "medium": "https://medium.com/@heyrm"
+  },
+  "summary": {
+    "id": [
+      "Saya mulai dari bawah: merakit PC, mengganti komponen rusak, menyelamatkan data pelanggan yang sudah menyerah. Hampir lima tahun saya mengerjakan itu setiap hari di sebuah toko resmi Lenovo di Balikpapan.",
+      "Dari sana saya belajar satu hal yang tidak diajarkan di buku: sistem paling sering gagal bukan karena serangan canggih, tapi karena hal mendasar yang terlewat. Kebiasaan mencari akar masalah itu yang membawa saya ke keamanan siber.",
+      "Sekarang saya menguji aplikasi web secara manual, membaca alur logika, membongkar parameter, menyusun rantai serangan. Beberapa temuan saya sudah divalidasi resmi oleh CSIRT pemerintah dan diperbaiki."
+    ],
+    "en": [
+      "I started at the bottom: assembling PCs, replacing dead components, rescuing customer data everyone else had given up on. I did that every day for nearly five years at an authorised Lenovo store in Balikpapan.",
+      "That work taught me something no textbook does: systems rarely fail because of sophisticated attacks. They fail on fundamentals that were overlooked. That habit of chasing root cause is what pulled me toward cybersecurity.",
+      "Today I test web applications manually, reading logic flaws, breaking parameters apart, chaining attacks together. Several of my findings have been formally validated and fixed by government CSIRTs."
+    ]
+  },
+  "facts": [
+    {
+      "label": {
+        "id": "Fokus",
+        "en": "Focus"
+      },
+      "value": {
+        "id": "Keamanan siber",
+        "en": "Cybersecurity"
+      }
+    },
+    {
+      "label": {
+        "id": "Pengalaman IT",
+        "en": "IT experience"
+      },
+      "value": {
+        "id": "±5 tahun",
+        "en": "~5 years"
+      }
+    },
+    {
+      "label": {
+        "id": "Status",
+        "en": "Status"
+      },
+      "value": {
+        "id": "Terbuka untuk peluang",
+        "en": "Open to opportunities"
+      }
+    },
+    {
+      "label": {
+        "id": "Lokasi",
+        "en": "Location"
+      },
+      "value": {
+        "id": "Balikpapan, Kaltim",
+        "en": "Balikpapan, Indonesia"
+      }
+    }
+  ],
+  "languages": [
+    {
+      "name": {
+        "id": "Bahasa Indonesia",
+        "en": "Indonesian"
+      },
+      "level": {
+        "id": "Native",
+        "en": "Native"
+      }
+    },
+    {
+      "name": {
+        "id": "Bahasa Inggris",
+        "en": "English"
+      },
+      "level": {
+        "id": "Menengah",
+        "en": "Intermediate"
+      }
+    }
+  ],
+  "marquee": [
+    "WEB-RTA",
+    "CNSP",
+    "MTCNA",
+    "CPPS",
+    "CCSC",
+    "ICIP",
+    "CAPC",
+    "ISC2",
+    "CRPO",
+    "IT Essentials",
+    "Burp Suite",
+    "OSINT",
+    "PC Assembly",
+    "Linux"
+  ],
+  "nav": [
+    {
+      "key": "work",
+      "href": "#work"
+    },
+    {
+      "key": "about",
+      "href": "#about"
+    },
+    {
+      "key": "albums",
+      "href": "#albums"
+    },
+    {
+      "key": "credentials",
+      "href": "#credentials"
+    },
+    {
+      "key": "writing",
+      "href": "#writing"
+    },
+    {
+      "key": "contact",
+      "href": "#contact"
+    }
+  ],
+  "labels": {
+    "work": {
+      "id": "Karya",
+      "en": "Work"
+    },
+    "about": {
+      "id": "Tentang",
+      "en": "About"
+    },
+    "albums": {
+      "id": "Galeri",
+      "en": "Albums"
+    },
+    "credentials": {
+      "id": "Kredensial",
+      "en": "Credentials"
+    },
+    "writing": {
+      "id": "Tulisan",
+      "en": "Writing"
+    },
+    "contact": {
+      "id": "Kontak",
+      "en": "Contact"
+    }
+  }
+}

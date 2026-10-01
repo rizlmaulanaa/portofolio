@@ -1,0 +1,341 @@
+/* =====================================================================
+   Navigasi, hero, kepala bagian, footer
+   ===================================================================== */
+
+/* ---------------- NAVIGASI ---------------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.nav.is-stuck {
+  border-bottom-color: var(--line);
+  box-shadow: 0 8px 26px rgba(8, 6, 5, 0.05);
+}
+
+.nav-inner {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: 16px var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* kiri: wordmark + surel */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+.brand-mark {
+  position: relative;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 1.22rem;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+  padding-right: 9px;
+  transition: color 0.25s;
+}
+.brand-dot {
+  position: absolute;
+  right: 0;
+  top: -1px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.brand:hover .brand-mark { color: var(--accent); }
+
+/* kanan: tombol bahasa + lingkaran hamburger */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lang-btn {
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 8px 14px;
+  border-radius: var(--pill);
+  border: 1.5px solid var(--line-strong);
+  color: var(--ink-2);
+  transition: all 0.25s;
+}
+.lang-btn:hover { border-color: var(--ink); color: var(--ink); }
+
+.burger {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  transition: background 0.25s, transform 0.25s;
+}
+.burger:hover { background: var(--accent); transform: rotate(90deg); }
+.burger span {
+  display: block;
+  width: 17px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  position: relative;
+  transition: background 0.2s;
+}
+.burger span::before,
+.burger span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 17px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.burger span::before { top: -6px; }
+.burger span::after { top: 6px; }
+.is-open .burger span { background: transparent; }
+.is-open .burger span::before { transform: translateY(6px) rotate(45deg); }
+.is-open .burger span::after { transform: translateY(-6px) rotate(-45deg); }
+
+/* ---------------- LAYAR TUTUP MENU ---------------- */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--pad);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s;
+}
+.overlay.is-open { opacity: 1; visibility: visible; }
+
+.overlay-nav { display: flex; flex-direction: column; gap: 4px; }
+.overlay-link {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2rem, 9vw, 4.4rem);
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  color: var(--ink);
+  padding: 6px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: color 0.25s, opacity 0.5s, transform 0.5s;
+}
+.overlay.is-open .overlay-link { opacity: 1; transform: none; }
+.overlay-link:nth-child(1) { transition-delay: 0.06s; }
+.overlay-link:nth-child(2) { transition-delay: 0.11s; }
+.overlay-link:nth-child(3) { transition-delay: 0.16s; }
+.overlay-link:nth-child(4) { transition-delay: 0.21s; }
+.overlay-link:nth-child(5) { transition-delay: 0.26s; }
+.overlay-link:nth-child(6) { transition-delay: 0.31s; }
+.overlay-link:hover { color: var(--accent); }
+.overlay-link i {
+  font-family: var(--sans);
+  font-style: normal;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.overlay-foot {
+  margin-top: clamp(30px, 6vh, 64px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 26px;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.overlay-foot a:hover { color: var(--accent); }
+
+/* ---------------- HERO ---------------- */
+.hero {
+  position: relative;
+  padding: clamp(56px, 11vh, 110px) 0 clamp(50px, 9vh, 92px);
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 0%, #fafafa 0%, transparent 62%),
+    var(--bg-soft);
+  overflow: hidden;
+}
+
+.hero-title {
+  text-align: center;
+  max-width: 17ch;
+  margin-inline: auto;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 7.2vw, 5.4rem);
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+/* potret bundar menyelip di tengah kalimat, ciri desain referensi */
+.hero-name { white-space: nowrap; }
+.hero-face {
+  display: inline-block;
+  width: clamp(48px, 7vw, 92px);
+  height: clamp(48px, 7vw, 92px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 22%;
+  vertical-align: middle;
+  margin: 0 0.12em;
+  border: 3px solid var(--bg);
+  box-shadow: 0 8px 24px rgba(8, 6, 5, 0.18);
+}
+
+.hero-sub {
+  text-align: center;
+  max-width: 30ch;
+  margin: clamp(22px, 3vw, 34px) auto 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.15rem, 2.9vw, 2.2rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--ink-2);
+}
+.hero-sub b { color: var(--accent); font-weight: 700; }
+
+.hero-lead {
+  text-align: center;
+  max-width: 62ch;
+  margin: clamp(20px, 2.6vw, 30px) auto 0;
+  color: var(--ink-2);
+  font-size: clamp(0.98rem, 1.3vw, 1.08rem);
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: clamp(26px, 3.4vw, 38px);
+}
+
+.hero-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  justify-content: center;
+  margin-top: clamp(30px, 4vw, 46px);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--ink-2);
+}
+.hero-status > span { display: inline-flex; align-items: center; gap: 8px; }
+.hero-status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  font-style: normal;
+}
+.hero-status .ok i { background: #16a34a; }
+
+/* ---------------- KEPALA BAGIAN ---------------- */
+.section { padding: clamp(64px, 10vh, 118px) 0; }
+.section-tint { background: var(--bg-soft); }
+
+.sec-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(20px, 3vw, 40px);
+  margin-bottom: clamp(34px, 5vw, 56px);
+}
+.sec-head-side {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 46ch;
+}
+.sec-head-side .lead { max-width: 42ch; }
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+  border-top: 1px solid var(--line);
+  padding: clamp(44px, 7vh, 76px) 0 34px;
+  background: var(--bg);
+}
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: clamp(30px, 5vh, 52px);
+  border-bottom: 1px solid var(--line);
+}
+.footer-cta {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.7rem, 4vw, 2.9rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  max-width: 16ch;
+}
+.footer-cta a { color: var(--accent); }
+.footer-cta a:hover { text-decoration: underline; text-underline-offset: 6px; }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+}
+.footer-links a {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--ink-2);
+  transition: color 0.25s;
+}
+.footer-links a:hover { color: var(--accent); }
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 26px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+.footer-mark { display: inline-flex; align-items: baseline; gap: 6px; }
+.footer-mark b {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .hero-title { max-width: 14ch; }
+}

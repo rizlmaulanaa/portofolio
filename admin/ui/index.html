@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panel Admin Portofolio</title>
+  <link rel="stylesheet" href="/admin/admin.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- ================= SISI KIRI ================= -->
+    <aside class="side">
+      <div class="side-brand">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 30 30" fill="none"><path d="M15 3.5 26.5 26.5H3.5Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/></svg>
+          <i></i>
+        </span>
+        <span>
+          <b>Panel Admin</b>
+          <small id="rootPath">…</small>
+        </span>
+      </div>
+
+      <nav class="side-nav" id="sideNav">
+        <p class="side-label">Ringkas</p>
+        <button class="side-link is-active" data-tab="home">Beranda</button>
+
+        <p class="side-label">Konten</p>
+        <button class="side-link" data-tab="site">Identitas</button>
+        <button class="side-link" data-tab="labels">Teks &amp; label</button>
+        <button class="side-link" data-tab="work">Karya</button>
+        <button class="side-link" data-tab="experience">Pengalaman</button>
+        <button class="side-link" data-tab="skills">Kemampuan</button>
+        <button class="side-link" data-tab="credentials">Kredensial</button>
+        <button class="side-link" data-tab="awards">Apresiasi</button>
+        <button class="side-link" data-tab="writing">Tulisan</button>
+
+        <p class="side-label">Foto</p>
+        <button class="side-link" data-tab="albums">Galeri</button>
+        <button class="side-link" data-tab="media">Media</button>
+
+        <p class="side-label">Lanjutan</p>
+        <button class="side-link" data-tab="raw">JSON mentah</button>
+      </nav>
+
+      <div class="side-foot">
+        <span class="dot" id="health"></span>
+        <span id="connText">Menghubungkan…</span>
+      </div>
+    </aside>
+
+    <!-- ================= KANAN ================= -->
+    <main class="main">
+      <header class="bar">
+        <div class="bar-left">
+          <span class="crumb" id="crumb">Beranda</span>
+          <span class="save-state" id="statusLine">Semua tersimpan</span>
+          <span class="sync" id="syncLine" data-state="idle"><i class="sync-dot"></i><span id="syncText">Memeriksa…</span></span>
+        </div>
+        <div class="bar-right">
+          <button class="btn" id="btnBuild" type="button" title="Bangun ulang dist/ dari file konten. Secara otomatis juga berjalan setiap kali Anda menyimpan.">Bangun &amp; terapkan</button>
+          <a class="btn btn-ghost" href="/portofolio/" target="_blank" rel="noopener" title="Buka situs hasil build di tab baru">Pratinjau</a>
+        </div>
+      </header>
+
+      <div class="content" id="content">
+        <div class="empty">Memuat…</div>
+      </div>
+    </main>
+  </div>
+
+  <!-- catatan singkat -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- log build -->
+  <div class="modal" id="buildModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="buildTitle">Membangun situs…</h2>
+        <button class="x" id="buildClose" type="button" aria-label="Tutup">✕</button>
+      </div>
+      <pre class="log" id="buildLog">Menunggu…</pre>
+    </div>
+  </div>
+
+  <script src="/admin/admin.js" defer></script>
+  <script src="/admin/admin-pages.js" defer></script>
+  <script src="/admin/admin-more.js" defer></script>
+  <script src="/admin/admin-boot.js" defer></script>
+</body>
+</html>

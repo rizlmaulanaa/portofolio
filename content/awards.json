@@ -1,0 +1,50 @@
+[
+  {
+    "org": "Pusdatin BPOM RI",
+    "date": {
+      "id": "Agustus 2024",
+      "en": "August 2024"
+    },
+    "title": {
+      "id": "Apresiasi Keamanan Cyber",
+      "en": "Cyber Security Appreciation"
+    },
+    "summary": {
+      "id": "Melaporkan celah directory traversal pada panel admin dan paparan informasi di portal resmi BPOM RI. Divalidasi dan diperbaiki dengan aman.",
+      "en": "Reported a directory traversal flaw on the admin panel and an information exposure on the official BPOM RI portal. Validated and safely fixed."
+    },
+    "accent": "cyan"
+  },
+  {
+    "org": "Denpasar Municipal CSIRT",
+    "date": {
+      "id": "2024",
+      "en": "2024"
+    },
+    "title": {
+      "id": "Piagam Penghargaan Resmi",
+      "en": "Official Certificate of Appreciation"
+    },
+    "summary": {
+      "id": "Atas partisipasi sukarela mengidentifikasi dan melaporkan kerentanan SQL Injection kritis pada subdomain administrasi perkotaan.",
+      "en": "For voluntarily identifying and reporting a critical SQL Injection vulnerability on a municipal administration subdomain."
+    },
+    "accent": "violet"
+  },
+  {
+    "org": "Banyuwangi CSIRT",
+    "date": {
+      "id": "September 2024",
+      "en": "September 2024"
+    },
+    "title": {
+      "id": "Sertifikat Kontribusi Siber",
+      "en": "Cyber Contribution Certificate"
+    },
+    "summary": {
+      "id": "Pengakuan atas audit celah logika bypass kontrol akses yang berpotensi mengakibatkan kebocoran parameter SKU.",
+      "en": "Recognition for an access-control bypass logic flaw audit that could have leaked SKU parameters."
+    },
+    "accent": "indigo"
+  }
+]

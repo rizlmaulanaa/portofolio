@@ -1,0 +1,341 @@
+[
+  {
+    "id": "sertifikat-apresiasi",
+    "kind": "certification",
+    "title": {
+      "id": "Sertifikat & Apresiasi",
+      "en": "Certificates & Recognition"
+    },
+    "date": {
+      "id": "2024 - 2026",
+      "en": "2024 - 2026"
+    },
+    "desc": {
+      "id": "Sertifikat profesional dan penghargaan resmi dari instansi, dikelompokkan jadi satu album.",
+      "en": "Professional certificates and official recognition from institutions, grouped into one album."
+    },
+    "photos": [
+      {
+        "src": "web-rta-cert.jpg",
+        "alt": {
+          "id": "Sertifikat WEB-RTA",
+          "en": "WEB-RTA certificate"
+        },
+        "caption": {
+          "id": "Certified Web Red Team Analyst",
+          "en": "Certified Web Red Team Analyst"
+        }
+      },
+      {
+        "src": "csirt-denpasar.jpg",
+        "alt": {
+          "id": "Piagam Denpasar CSIRT",
+          "en": "Denpasar CSIRT certificate"
+        },
+        "caption": {
+          "id": "Piagam penghargaan resmi",
+          "en": "Official certificate of appreciation"
+        }
+      },
+      {
+        "src": "csirt-banyuwangi.jpg",
+        "alt": {
+          "id": "Sertifikat Banyuwangi CSIRT",
+          "en": "Banyuwangi CSIRT certificate"
+        },
+        "caption": {
+          "id": "Sertifikat kontribusi siber",
+          "en": "Cyber contribution certificate"
+        }
+      },
+      {
+        "src": "apresiasi-bpom.jpg",
+        "alt": {
+          "id": "Apresiasi dari BPOM RI",
+          "en": "Appreciation from BPOM RI"
+        },
+        "caption": {
+          "id": "Apresiasi keamanan cyber",
+          "en": "Cyber security appreciation"
+        }
+      },
+      {
+        "src": "cpps-cert.jpg",
+        "alt": {
+          "id": "Sertifikat CPPS",
+          "en": "CPPS certificate"
+        },
+        "caption": {
+          "id": "Certified Phishing Prevention Specialist",
+          "en": "Certified Phishing Prevention Specialist"
+        }
+      },
+      {
+        "src": "crpo-cert.jpg",
+        "alt": {
+          "id": "Sertifikat CRPO",
+          "en": "CRPO certificate"
+        },
+        "caption": {
+          "id": "Certified Ransomware Protection Officer",
+          "en": "Certified Ransomware Protection Officer"
+        }
+      }
+    ]
+  },
+  {
+    "id": "merdeka-siber",
+    "title": {
+      "id": "Bootcamp Merdeka Siber",
+      "en": "Merdeka Siber Bootcamp"
+    },
+    "kind": "training",
+    "date": {
+      "id": "2024",
+      "en": "2024"
+    },
+    "desc": {
+      "id": "Peserta terpilih bootcamp penetrasi keamanan sistem informasi.",
+      "en": "Selected participant in the information system security penetration bootcamp."
+    },
+    "photos": [
+      {
+        "src": "merdeka-siber.jpg",
+        "alt": {
+          "id": "Sertifikat Merdeka Siber",
+          "en": "Merdeka Siber certificate"
+        },
+        "caption": {
+          "id": "Bootcamp Penetrasi Keamanan Sistem Informasi",
+          "en": "Information System Security Penetration Bootcamp"
+        }
+      }
+    ]
+  },
+  {
+    "id": "lenovo-accelerate",
+    "title": {
+      "id": "Lenovo Accelerate 2026",
+      "en": "Lenovo Accelerate 2026"
+    },
+    "kind": "event",
+    "date": {
+      "id": "2026",
+      "en": "2026"
+    },
+    "desc": {
+      "id": "Dokumentasi acara tahunan Lenovo bersama mitra bisnis.",
+      "en": "Documentation of Lenovo's annual partner event."
+    },
+    "photos": [
+      {
+        "src": "lenovo-accelerate-1.jpg",
+        "alt": {
+          "id": "Lenovo Accelerate 2026",
+          "en": "Lenovo Accelerate 2026"
+        },
+        "caption": {
+          "id": "Lenovo Accelerate 2026",
+          "en": "Lenovo Accelerate 2026"
+        }
+      },
+      {
+        "src": "lenovo-accelerate-2.jpg",
+        "alt": {
+          "id": "Lenovo Accelerate 2026",
+          "en": "Lenovo Accelerate 2026"
+        },
+        "caption": {
+          "id": "Lenovo Accelerate 2026",
+          "en": "Lenovo Accelerate 2026"
+        }
+      },
+      {
+        "src": "lenovo-accelerate-3.jpg",
+        "alt": {
+          "id": "Lenovo Accelerate 2026",
+          "en": "Lenovo Accelerate 2026"
+        },
+        "caption": {
+          "id": "Lenovo Accelerate 2026",
+          "en": "Lenovo Accelerate 2026"
+        }
+      }
+    ]
+  },
+  {
+    "id": "synnex-visidata",
+    "title": {
+      "id": "Kolaborasi Synnex × Visidata",
+      "en": "Synnex × Visidata Collaboration"
+    },
+    "kind": "event",
+    "date": {
+      "id": "Mei 2026",
+      "en": "May 2026"
+    },
+    "desc": {
+      "id": "Acara “Time to Level Up” bersama PT Synnex Metrodata Indonesia dan ASUS Business di Novotel Balikpapan.",
+      "en": "The “Time to Level Up” event with PT Synnex Metrodata Indonesia and ASUS Business at Novotel Balikpapan."
+    },
+    "photos": [
+      {
+        "src": "synnex-2026-1.jpg",
+        "alt": {
+          "id": "Acara Synnex dan Visidata",
+          "en": "Synnex and Visidata event"
+        },
+        "caption": {
+          "id": "Time to Level Up, Novotel Balikpapan",
+          "en": "Time to Level Up, Novotel Balikpapan"
+        }
+      },
+      {
+        "src": "synnex-2026-2.jpg",
+        "alt": {
+          "id": "Acara Synnex dan Visidata",
+          "en": "Synnex and Visidata event"
+        },
+        "caption": {
+          "id": "Time to Level Up, Novotel Balikpapan",
+          "en": "Time to Level Up, Novotel Balikpapan"
+        }
+      }
+    ]
+  },
+  {
+    "id": "kerja-harian",
+    "title": {
+      "id": "Kegiatan Sehari-hari",
+      "en": "Day-to-Day Work"
+    },
+    "kind": "work",
+    "date": {
+      "id": "2021-2026",
+      "en": "2021-2026"
+    },
+    "desc": {
+      "id": "Perakitan, perawatan, dan penanganan perangkat di toko.",
+      "en": "Assembly, maintenance, and device handling at the store."
+    },
+    "photos": [
+      {
+        "src": "aktivitas-1.jpg",
+        "alt": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        },
+        "caption": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        }
+      },
+      {
+        "src": "aktivitas-2.jpg",
+        "alt": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        },
+        "caption": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        }
+      },
+      {
+        "src": "aktivitas-3.jpg",
+        "alt": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        },
+        "caption": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        }
+      },
+      {
+        "src": "aktivitas-4.jpg",
+        "alt": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        },
+        "caption": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        }
+      },
+      {
+        "src": "aktivitas-5.jpg",
+        "alt": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        },
+        "caption": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        }
+      },
+      {
+        "src": "aktivitas-6.jpg",
+        "alt": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        },
+        "caption": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        }
+      },
+      {
+        "src": "aktivitas-7.jpg",
+        "alt": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        },
+        "caption": {
+          "id": "Dokumentasi kerja",
+          "en": "Work documentation"
+        }
+      }
+    ]
+  },
+  {
+    "id": "profil",
+    "title": {
+      "id": "Foto Profil",
+      "en": "Profile Photos"
+    },
+    "kind": "profile",
+    "date": {
+      "id": "",
+      "en": ""
+    },
+    "desc": {
+      "id": "",
+      "en": ""
+    },
+    "photos": [
+      {
+        "src": "profil-2.jpg",
+        "alt": {
+          "id": "Foto profil",
+          "en": "Profile photo"
+        },
+        "caption": {
+          "id": "Foto profil",
+          "en": "Profile photo"
+        }
+      },
+      {
+        "src": "profil-1.jpg",
+        "alt": {
+          "id": "Foto profil",
+          "en": "Profile photo"
+        },
+        "caption": {
+          "id": "Foto profil",
+          "en": "Profile photo"
+        }
+      }
+    ]
+  }
+]

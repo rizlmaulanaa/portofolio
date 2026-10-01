@@ -1,0 +1,250 @@
+{
+  "nav": {
+    "work": {
+      "id": "Karya",
+      "en": "Work"
+    },
+    "about": {
+      "id": "Tentang",
+      "en": "About"
+    },
+    "albums": {
+      "id": "Galeri",
+      "en": "Albums"
+    },
+    "credentials": {
+      "id": "Kredensial",
+      "en": "Credentials"
+    },
+    "writing": {
+      "id": "Tulisan",
+      "en": "Writing"
+    },
+    "contact": {
+      "id": "Kontak",
+      "en": "Contact"
+    }
+  },
+  "hero": {
+    "cta": {
+      "id": "Hubungi saya",
+      "en": "Get in touch"
+    },
+    "scroll": {
+      "id": "Gulir",
+      "en": "Scroll"
+    }
+  },
+  "work": {
+    "kicker": {
+      "id": "Karya terpilih",
+      "en": "Selected work"
+    },
+    "title": {
+      "id": "Proyek & Riset",
+      "en": "Projects & Research"
+    },
+    "sub": {
+      "id": "Riset keamanan, materi pelatihan, dan perangkat lunak yang saya bangun sendiri.",
+      "en": "Security research, training material, and software I built myself."
+    },
+    "viewAll": {
+      "id": "Semua repo di GitHub",
+      "en": "All repos on GitHub"
+    },
+    "open": {
+      "id": "Buka proyek",
+      "en": "Open project"
+    }
+  },
+  "about": {
+    "kicker": {
+      "id": "Tentang",
+      "en": "About"
+    },
+    "title": {
+      "id": "Singkat saja",
+      "en": "In short"
+    },
+    "factsTitle": {
+      "id": "Data ringkas",
+      "en": "At a glance"
+    },
+    "expTitle": {
+      "id": "Pengalaman kerja",
+      "en": "Work experience"
+    },
+    "skillTitle": {
+      "id": "Kemampuan",
+      "en": "Capabilities"
+    },
+    "sub": {
+      "id": "Perjalanan dari toko servis ke pengujian keamanan, tanpa basa-basi.",
+      "en": "From a repair counter to security testing, no fluff."
+    }
+  },
+  "albums": {
+    "kicker": {
+      "id": "Galeri",
+      "en": "Albums"
+    },
+    "title": {
+      "id": "Dokumentasi",
+      "en": "Documentation"
+    },
+    "sub": {
+      "id": "Sertifikat, apresiasi, dan kegiatan, dikelompokkan per momen, bukan sekadar tumpukan foto.",
+      "en": "Certificates, recognition, and activities, grouped by moment, not just a pile of photos."
+    },
+    "filters": {
+      "all": {
+        "id": "Semua",
+        "en": "All"
+      },
+      "certification": {
+        "id": "Sertifikasi",
+        "en": "Certifications"
+      },
+      "recognition": {
+        "id": "Apresiasi",
+        "en": "Recognition"
+      },
+      "event": {
+        "id": "Acara",
+        "en": "Events"
+      },
+      "training": {
+        "id": "Pelatihan",
+        "en": "Training"
+      },
+      "work": {
+        "id": "Kegiatan",
+        "en": "Work"
+      },
+      "profile": {
+        "id": "Profil",
+        "en": "Profile"
+      }
+    },
+    "photos": {
+      "id": "foto",
+      "en": "photos"
+    }
+  },
+  "credentials": {
+    "kicker": {
+      "id": "Kredensial",
+      "en": "Credentials"
+    },
+    "title": {
+      "id": "Pendidikan & Sertifikasi",
+      "en": "Education & Certifications"
+    },
+    "eduTitle": {
+      "id": "Pendidikan",
+      "en": "Education"
+    },
+    "certTitle": {
+      "id": "Sertifikasi Profesional",
+      "en": "Professional Certifications"
+    },
+    "pendingTitle": {
+      "id": "Menunggu kelengkapan tanggal",
+      "en": "Awaiting issue dates"
+    },
+    "pendingNote": {
+      "id": "Sertifikasi ini sudah saya miliki; tanggal dan ID kredensial akan dilengkapi.",
+      "en": "I hold these certifications; issue dates and credential IDs will be added soon."
+    },
+    "sub": {
+      "id": "Pendidikan, sertifikasi yang sudah terbit, dan yang masih menunggu tanggal.",
+      "en": "Education, issued certifications, and those still awaiting a date."
+    }
+  },
+  "awards": {
+    "kicker": {
+      "id": "Validasi",
+      "en": "Validation"
+    },
+    "title": {
+      "id": "Apresiasi resmi",
+      "en": "Official recognition"
+    },
+    "sub": {
+      "id": "Laporan kerentanan dari pengujian mandiri yang divalidasi oleh tim respons siber pemerintah.",
+      "en": "Vulnerability reports from independent testing, validated by government cyber response teams."
+    },
+    "verified": {
+      "id": "Kerentanan terverifikasi",
+      "en": "Verified vulnerability"
+    }
+  },
+  "writing": {
+    "kicker": {
+      "id": "Tulisan",
+      "en": "Writing"
+    },
+    "title": {
+      "id": "Catatan & Writeup",
+      "en": "Notes & Writeups"
+    },
+    "sub": {
+      "id": "Yang saya tulis di Medium, kebanyakan soal keamanan, sesekali soal perangkat keras.",
+      "en": "What I write on Medium, mostly security, occasionally hardware."
+    },
+    "all": {
+      "id": "Semua tulisan",
+      "en": "All writing"
+    }
+  },
+  "contact": {
+    "kicker": {
+      "id": "Kontak",
+      "en": "Contact"
+    },
+    "title": {
+      "id": "Mari bekerja sama",
+      "en": "Let's work together"
+    },
+    "sub": {
+      "id": "Saya terbuka untuk posisi IT Support, Cybersecurity Analyst, dan peran lain yang relevan.",
+      "en": "I'm open to IT Support, Cybersecurity Analyst, and other relevant roles."
+    },
+    "email": {
+      "id": "Kirim email",
+      "en": "Send email"
+    },
+    "copy": {
+      "id": "Salin alamat",
+      "en": "Copy address"
+    }
+  },
+  "footer": {
+    "built": {
+      "id": "Dibangun dengan Astro",
+      "en": "Built with Astro"
+    },
+    "rights": {
+      "id": "Hak cipta dilindungi.",
+      "en": "All rights reserved."
+    },
+    "lang": {
+      "id": "Bahasa",
+      "en": "Language"
+    }
+  },
+  "lightbox": {
+    "prev": {
+      "id": "Sebelumnya",
+      "en": "Previous"
+    },
+    "next": {
+      "id": "Berikutnya",
+      "en": "Next"
+    },
+    "close": {
+      "id": "Tutup",
+      "en": "Close"
+    }
+  }
+}
