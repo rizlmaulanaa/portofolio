@@ -1,6 +1,6 @@
 # Update dan deploy
 
-Alur lengkap dari perubahan konten sampai tayang di https://heyrm.my.id/.
+Alur lengkap dari perubahan konten sampai tayang di https://rizlmaulanaa.github.io/portofolio/.
 
 ## Ringkasan
 

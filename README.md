@@ -2,7 +2,7 @@
 
 [![Deploy situs ke GitHub Pages](https://github.com/rizlmaulanaa/portofolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/rizlmaulanaa/portofolio/actions/workflows/deploy.yml)
 
-**Tayang:** https://heyrm.my.id/
+**Tayang:** https://rizlmaulanaa.github.io/portofolio/
 
 ## Dokumentasi
 

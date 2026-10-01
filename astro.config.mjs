@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
 
-// Tanpa base path: situs disajikan di root domain heyrm.my.id (GitHub Pages
-// dengan custom domain selalu menyajikan isi repo di root).
+// base '/portofolio' agar muat di GitHub Pages: rizlmaulanaa.github.io/portofolio
 export default defineConfig({
-  site: 'https://heyrm.my.id',
+  site: 'https://rizlmaulanaa.github.io',
+  base: '/portofolio',
   trailingSlash: 'ignore',
   build: {
     assets: 'assets',

@@ -13,13 +13,15 @@ Kumpulan dokumen untuk menjalankan, mengelola, dan men deploy portofolio ini.
 
 ```bash
 npm install            # sekali saja
-npm run preview        # situs   → http://localhost:4321/
+npm run preview        # situs   → http://localhost:4321/portofolio/
 npm run admin          # panel   → http://localhost:4322/admin
 npm run dev            # pengembangan dengan pembaruan langsung
 ```
 
+Selalu akses lewat sub-path `/portofolio/`. Membuka `/` akan berakhir di halaman 404 karena konfigurasi base path.
+
 ## Sumber daya
 
-- Situs tayang: https://heyrm.my.id/
+- Situs tayang: https://rizlmaulanaa.github.io/portofolio/
 - Repositori: https://github.com/rizlmaulanaa/portofolio
 - Riwayat portofolio sebelumnya tersimpan di tag `arsip-portofolio-lama`

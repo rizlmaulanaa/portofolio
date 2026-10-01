@@ -1,7 +1,7 @@
 /**
  * BASE_URL dari Astro bisa berakhir dengan atau tanpa garis miring,
  * tergantung konfigurasi. Helper ini memastikan hasilnya selalu benar
- * sehingga tidak pernah muncul "mediafoo.jpg" atau sejenisnya.
+ * sehingga tidak pernah muncul "/portofoliomedia/..." atau sejenisnya.
  */
 const env = (import.meta as any).env ?? {};
 const RAW: string = env.BASE_URL || '/';

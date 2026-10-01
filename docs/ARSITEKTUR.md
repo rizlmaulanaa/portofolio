@@ -53,20 +53,15 @@ Seluruh situs berada di `src/pages/index.astro` yang menghasilkan satu `index.ht
 
 ```js
 // astro.config.mjs
-site: 'https://heyrm.my.id',
+site: 'https://rizlmaulanaa.github.io',
+base: '/portofolio',
 trailingSlash: 'ignore',
 build: { assets: 'assets' },
 ```
 
-Tidak ada `base` karena situs disajikan di root domain. `site` dipakai Astro untuk kanonikal dan Open Graph.
+`base` harus selaras dengan nama repository. GitHub Pages menyajikan repository `portofolio` pada `rizlmaulanaa.github.io/portofolio/`, jadi mengganti nama repo berarti mengubah `base`, URL tautan di README, dan `BASE_PATH` di `admin/server.mjs` secara bersamaan.
 
-Repo ini memakai custom domain GitHub Pages, jadi `heyrm.my.id` mengarah langsung ke isi branch `main`. Tiga nilai berikut harus selalu dijaga tetap cocok, dan mengganti salah satunya berarti menyesuaikan sisanya:
-
-- `site` di `astro.config.mjs`
-- `BASE_PATH` di `admin/server.mjs` dan di `admin/ui/admin-more.js`
-- domain pada Settings → Pages repository, beserta record DNS di Cloudflare
-
-`src/utils/url.ts` membaca `BASE_URL` dari Astro, jadi URL aset otomatis mengikuti konfigurasi tanpa perubahan manual.
+Konstanta `BASE_PATH` di `admin/server.mjs` dipakai panel untuk menyajikan thumbnail gambar dan memeriksa kondisi pratinjau lokal.
 
 ## Dua bahasa
 
